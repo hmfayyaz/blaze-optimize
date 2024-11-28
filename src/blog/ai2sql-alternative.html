@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="e4774817-fdf9-4bf4-a036-7baae3f41bd2"
+      data-blockingmode="auto"
+      type="text/javascript"
+    ></script>
+    <script src="../gtm.js"></script>
+    <meta
+      property="og:image"
+      content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="1024" />
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SQL2AI alternatives in 2024: Compare features, strengths, and limitations of Holistics, BlazeSQL, Metabase, Redash, and Microsoft Power BI" />
+    <!-- Google tag (gtag.js) -->
+    <link href="../output.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/favicon1-32x32.png" type="image/png" />
+    <link rel="icon" href="../images/favicon1.ico" type="image/x-icon" />
+
+    <title>Our Recommended AI2SQL Alternatives in 2024</title>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "iilxk31jtt");
+    </script>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- mobile nav bar -->
+    <script type="text/javascript">
+      const togglerButton = document.querySelector(".open-navbar");
+      const mobileNavbar = document.getElementById("mobile-navbar");
+      const body = document.body;
+
+      const openIcon = document.querySelector(".open-icon");
+      const closeIcon = document.querySelector(".close-icon");
+
+      function toggleNavbar() {
+        mobileNavbar.classList.toggle("hidden");
+        openIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("block");
+        body.classList.toggle("no-scroll");
+      }
+
+      togglerButton.addEventListener("click", toggleNavbar);
+
+      closeIcon.addEventListener("click", () => {
+        mobileNavbar.classList.add("hidden");
+        openIcon.classList.remove("hidden");
+        body.classList.remove("no-scroll");
+      });
+    </script>
+
+    <!-- table content -->
+    <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggleButton");
+    const tableOfContentBody = document.getElementById("tableOfContentBody");
+    const contentGridPanels = document.querySelectorAll(".content_grid_panel");
+    const toggleContentLinks = document.querySelectorAll(".toggleContentGridPanel");
+    const arrowIcons = document.querySelectorAll(".title_arrow img");
+
+ function isMobileDevice() {
+          return window.innerWidth <= 992;
+        }
+
+    function updateArrowIcons() {
+        arrowIcons.forEach((arrow) => {
+            const parentLink = arrow.closest(".toggleContentGridPanel");
+            const targetId = parentLink.getAttribute("data-target");
+            const targetPanel = document.getElementById(targetId);
+
+            if (targetPanel.style.display === "block") {
+                arrow.classList.add("rotate");
+            } else {
+                arrow.classList.remove("rotate");
+            }
+        });
+    }
+
+
+    function updateToggleButtonIcon(isVisible) {
+      const toggleImg = toggleButton.querySelector("img");
+      if (isVisible) {
+        toggleImg.src = "../images/minus_icon-svg.svg";
+        toggleButton.classList.remove("plus-icon");
+      } else {
+        toggleImg.src = "../images/plus_icon-svg.svg";
+        toggleButton.classList.add("plus-icon");
+      }
+    }
+
+  toggleButton.addEventListener("click", () => {
+          const isVisible = tableOfContentBody.style.display !== "none";
+          tableOfContentBody.style.display = isVisible ? "none" : "block";
+          updateToggleButtonIcon(!isVisible);
+          updateArrowIcons();
+        });
+
+
+
+    toggleContentLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("data-target");
+            const targetPanel = document.getElementById(targetId);
+            const isPanelVisible = targetPanel.style.display === "block";
+
+            contentGridPanels.forEach((panel) => {
+                panel.style.display = "none";
+            });
+
+            targetPanel.style.display = isPanelVisible ? "none" : "block";
+
+            updateArrowIcons();
+        });
+    });
+
+ if (isMobileDevice()) {
+          tableOfContentBody.style.display = "none";
+          updateToggleButtonIcon(false);
+          contentGridPanels.forEach((panel) => {
+            panel.style.display = "none";
+          });
+        } else {
+          tableOfContentBody.style.display = "block";
+          updateToggleButtonIcon(true);
+          contentGridPanels.forEach((panel, index) => {
+            panel.style.display = index === 0 ? "block" : "none";
+          });
+        }
+
+        window.addEventListener("resize", () => {
+          if (isMobileDevice()) {
+            tableOfContentBody.style.display = "none";
+            updateToggleButtonIcon(false);
+            contentGridPanels.forEach((panel) => {
+              panel.style.display = "none";
+            });
+          } else {
+            tableOfContentBody.style.display = "block";
+            updateToggleButtonIcon(true);
+            contentGridPanels.forEach((panel, index) => {
+              panel.style.display = index === 0 ? "block" : "none";
+            });
+          }
+          updateArrowIcons();
+        });
+      });
+
+// TOC specific functionality
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.table_of_content a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+
+            // Only prevent default behavior for internal links that start with '#'
+            if (href.startsWith('#')) {
+                e.preventDefault(); // Prevent the default anchor click behavior for TOC links
+
+                const targetId = href.substring(1); // Get the ID from the href
+                const targetElement = document.getElementById(targetId); // Find the target element by ID
+
+                const headerOffset = document.querySelector('.sticky').offsetHeight; // Adjust this selector to match your header class
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerOffset;
+
+                // Scroll to the target element with smooth behavior
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+// Clipboard functionality remains unchanged
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('URL copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+
+
+
+    </script>
+
+  </head>
+  <body>
+
+        <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+          <defs>
+            <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+             <path d="M.5 200V.5H200" fill="none" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
+        </svg>
+
+      <!-- add header -->
+
+      <header
+      class="sticky top-0 z-50 py-3 bg-white md:py-6 md:border-b border-black-8"
+    >
+      <div class="container-center">
+        <nav class="relative z-0 flex items-center justify-between">
+          <a
+            href="https://www.blazesql.com"
+            class="flex items-center gap-2 lg:gap-3 hover-opacity"
+          >
+            <img src="../images/blazesql.svg" alt="BlazeSQL logo" />
+            <p class="text-xl -tracking-0.4 font-semibold text-[#5850ec]">
+              BlazeSQL
+            </p>
+          </a>
+
+          <ul class="items-center hidden md:gap-5 lg:gap-10 md:flex">
+            <li>
+              <a
+                href="https://www.blazesql.com/privacy.html"
+                class="font-medium capitalize label-s cs-animate hover:text-[#5850ec] text-black-100"
+                >Privacy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-medium capitalize label-s cs-animate hover:text-[#5850ec] text-black-100"
+                >White-label &amp; embed</a
+              >
+            </li>
+            <li class="relative z-0 navbar-dropdown group">
+              <a
+                href="#"
+                class="flex items-center font-medium capitalize label-s cs-animate hover:text-[#5850ec] text-black-100 group"
+              >
+                Pricing
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="group-hover:rotate-180 cs-animate"
+                  fill="none"
+                >
+                  <path d="M17 10H7L12 16L17 10Z" fill="currentcolor"></path>
+                </svg>
+              </a>
+              <div
+                class="absolute hidden w-40 pt-2 -translate-x-1/2 left-1/2 top-full group-hover:block"
+              >
+                <div
+                  class="p-1 bg-white border rounded-lg border-black-12 shadow-nav-dropdown backdrop-blur-32"
+                >
+                  <ul>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-black-100 text-sm cs-animate font-medium -tracking-0.14 hover:bg-[#4e4a9b1f] p-3 rounded hover:text-[#4e4a9b]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.99292 11.6719C10.0671 11.6719 12.6946 12.1377 12.6946 13.9985C12.6946 15.8594 10.0846 16.3385 6.99292 16.3385C3.91792 16.3385 1.29125 15.8769 1.29125 14.0152C1.29125 12.1535 3.90042 11.6719 6.99292 11.6719Z"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.99292 9.01634C4.97459 9.01634 3.33792 7.38051 3.33792 5.36217C3.33792 3.34384 4.97459 1.70801 6.99292 1.70801C9.01042 1.70801 10.6471 3.34384 10.6471 5.36217C10.6546 7.37301 9.02959 9.00884 7.01875 9.01634H6.99292Z"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M12.7359 8.06741C14.0701 7.87991 15.0976 6.73491 15.1001 5.34908C15.1001 3.98324 14.1042 2.84991 12.7984 2.63574"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M14.4962 11.2764C15.7887 11.4689 16.6912 11.9222 16.6912 12.8555C16.6912 13.498 16.2662 13.9147 15.5795 14.1755"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                        For teams
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-black-100 text-sm cs-animate font-medium -tracking-0.14 hover:bg-[#4e4a9b1f] p-3 rounded hover:text-[#4e4a9b]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="18"
+                          viewBox="0 0 14 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.9873 11.7891C3.76428 11.7891 1.0119 12.2764 1.0119 14.228C1.0119 16.1795 3.74682 16.6843 6.9873 16.6843C10.2103 16.6843 12.9619 16.1962 12.9619 14.2454C12.9619 12.2946 10.2278 11.7891 6.9873 11.7891Z"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.9873 9.00523C9.10238 9.00523 10.8167 7.29015 10.8167 5.17507C10.8167 3.05999 9.10238 1.3457 6.9873 1.3457C4.87222 1.3457 3.15714 3.05999 3.15714 5.17507C3.15 7.283 4.85317 8.99808 6.96032 9.00523H6.9873Z"
+                            stroke="currentcolor"
+                            stroke-width="1.42857"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                        For individuals
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="items-center hidden gap-4 md:flex">
+            <button
+              type="button"
+              class="border-transparent btn-main btn-secondary"
+            >
+              Book a demo
+            </button>
+            <button type="button" class="btn-main btn-primary">
+              Get started
+            </button>
+          </div>
+
+          <!-- Navbar mobile -->
+          <button
+            type="button"
+            class="block hover-opacity md:hidden open-navbar focus:outline-none"
+          >
+            <svg
+              class="open-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M2 8H22M22 16H2"
+                stroke="#0F0F10"
+                stroke-width="1.5"
+              ></path>
+            </svg>
+          </button>
+
+          <div
+            id="mobile-navbar"
+            class="hidden fixed top-0 left-0 flex flex-col items-center justify-between w-full h-full bg-white"
+          >
+            <div class="container-center">
+              <div class="flex items-center justify-between py-3 w-full">
+                <a
+                  href="https://www.blazesql.com"
+                  class="flex items-center gap-2 lg:gap-3 hover-opacity"
+                >
+                  <img src="../images/blazesql.svg" alt="BlazeSQL logo" />
+                  <p class="text-xl -tracking-0.4 font-semibold text-[#5850ec]">
+                    BlazeSQL
+                  </p>
+                </a>
+                <button type="button" class="block focus:outline-none">
+                  <!-- Close Icon (Initially hidden) -->
+                  <svg
+                    class="close-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M5 5L19 19M19 5L5 19"
+                      stroke="#0F0F10"
+                      stroke-width="1.5"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <ul
+              class="flex flex-col items-start flex-1 w-full gap-10 px-4 mt-10"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="capitalize cs-animate hover:text-[#5850ec] text-black-100"
+                  >Privacy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="capitalize cs-animate hover:text-[#5850ec] text-black-100"
+                  >White-label &amp; embed</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="capitalize cs-animate hover:text-[#5850ec] text-black-100"
+                  >Pricing for teams</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="capitalize cs-animate hover:text-[#5850ec] text-black-100"
+                  >Pricing for individuals</a
+                >
+              </li>
+            </ul>
+            <div
+              class="flex items-center justify-between w-full gap-3 px-4 py-10 border-t border-black-12"
+            >
+              <button type="button" class="w-full btn-main btn-primary">
+                Get started
+              </button>
+              <button
+                type="button"
+                class="w-full btn-main btn-secondary border-[#0f0f101f]"
+              >
+                Book a demo
+              </button>
+            </div>
+          </div>
+          <!-- Navbar mobile -->
+        </nav>
+      </div>
+    </header>
+
+         <!-- Main Wrapper -->
+          <div class="container_warpper_content container-center flex justify-between sticky_relative">
+             <!-- TOC -->
+                <div class="table_of_content w-[27%] h-fit">
+    <div class="table_of_content_inner">
+        <div class="content_head" id="toggleButton">
+            <h5 class="main_title">Table of contents</h5>
+            <div class="toggle">
+                <img src="../images/minus_icon-svg.svg" alt="minus icon logo" />
+            </div>
+        </div>
+        <div class="table_of_content_body" id="tableOfContentBody">
+            
+                <div class="content_body_grid">
+                    <a href="#holistics" class="toggleContentGridPanel" data-target="panel1">
+                        <div class="table_title">
+                            Holistics
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel1">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#holistics">Holistics</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features" >Features</a>
+                                    
+                                        <a href="#limitations" >Limitations</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#blazesql" class="toggleContentGridPanel" data-target="panel2">
+                        <div class="table_title">
+                            BlazeSQL
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel2">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#blazesql">BlazeSQL</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features" >Features</a>
+                                    
+                                        <a href="#limitations" >Limitations</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#metabase" class="toggleContentGridPanel" data-target="panel3">
+                        <div class="table_title">
+                            Metabase
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel3">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#metabase">Metabase</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features" >Features</a>
+                                    
+                                        <a href="#limitations" >Limitations</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#redash" class="toggleContentGridPanel" data-target="panel4">
+                        <div class="table_title">
+                            Redash
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel4">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#redash">Redash</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features" >Features</a>
+                                    
+                                        <a href="#limitations" >Limitations</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#power-bi" class="toggleContentGridPanel" data-target="panel5">
+                        <div class="table_title">
+                            Power BI
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel5">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#power-bi">Power BI</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features" >Features</a>
+                                    
+                                        <a href="#limitations" >Limitations</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="social_icon_share">
+        <a href="https://twitter.com/intent/tweet?text=https://www.blazesql.com/blog/ai2sql-alternative" target="_blank">
+            <img src="../images/twitter.svg" alt="Twitter" />
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.blazesql.com/blog/ai2sql-alternative" target="_blank">
+            <img src="../images/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="mailto:?body=https://www.blazesql.com/blog/ai2sql-alternative" target="_blank">
+            <img src="../images/mail.svg" alt="Mail" />
+        </a>
+
+        <a onclick="copyToClipboard('https://www.blazesql.com/blog/ai2sql-alternative')" target="_blank">
+            <img src="../images/clipboard.svg" alt="Clipboard" />
+        </a>
+    </div>
+
+</div>
+                <!-- Main Content -->
+                <div class="main_page_content text-base leading-7 text-gray-700 w-[73%] ml-20" >
+                  <div class="px-6 py-16 lg:px-8 pt-0">
+                      <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+                         <a id="our-recommended-ai2sql-alternatives-in-2024"></a><h1
+  class="mt-16 mb-4 text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+>
+  Our Recommended AI2SQL Alternatives in 2024
+</h1>
+<p class="mt-3 text-xl leading-8">AI2SQL has quickly become a go-to for teams looking for a straightforward way to interact with data. It turns natural-language requests into SQL queries, making it easy for anyone, regardless of SQL knowledge, to pull insights directly from their databases. Beyond query generation, AI2SQL’s features for optimising and error-proofing SQL help keep workflows smooth and efficient, allowing teams to spend less time wrestling with syntax and focusing more on insights.</p>
+
+<p class="mt-3 text-xl leading-8">Still, AI2SQL may not suit every team perfectly. Factors like specific visualisation needs, reporting preferences, and budget constraints mean some teams might find a better fit with alternatives. Tools like Metabase, Redash, Microsoft Power BI, Holistics, and BlazeSQL each offer something distinct—whether it’s richer reporting options, flexible dashboards, or a broader range of customisation. This guide explores these options, helping teams pinpoint the best match for their unique data needs.</p>
+
+<a id="holistics"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">Holistics</strong>
+</h2>
+<p class="mt-3 text-xl leading-8">Holistics is a robust BI platform that bridges the gap between technical teams and everyday users, making data insights accessible without heavy reliance on SQL. At its core, Holistics uses a model-driven approach, allowing data teams to set up reusable data models that become the backbone for analysis across the organisation. This setup enables non-technical users to self-serve data—running queries, exploring datasets, and building reports independently—all while ensuring that data experts maintain consistency and accuracy. With Holistics, teams can reduce repetitive tasks and create a streamlined reporting process where insights are easily accessible, accurate, and standardised across departments.</p>
+<a id="features"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Features
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Advanced SQL Capabilities</strong>: Holistics caters to advanced users by allowing direct SQL use, providing the flexibility for deeper and highly tailored analyses. This is especially valuable for teams with specific business questions that require customised queries.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Dynamic Data Exploration</strong>: Holistics enables users to explore data from various perspectives with customisable filters. This flexibility makes it easy to perform ad hoc analyses and gain insights without predefined constraints.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Embedded Dashboards</strong>: Sharing reports is easy thanks to integrations with tools like Google Sheets, PDF exports, email, and Slack.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Effortless Report Sharing</strong>: Share reports seamlessly through integrations with Google Sheets, PDF exports, email, Slack, or direct links, making it simple to distribute insights across the organisation.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Live Data Access</strong>: Connecting directly to SQL databases for real-time analysis eliminates batch processing or data warehousing lag, so insights are always up-to-date.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Enhanced Data Security</strong>: Encrypted connections ensure data integrity and access controls that keep sensitive information secure and only accessible to authorised users.</p></li></ul><a id="limitations"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Limitations
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Limited Visualisation Options</strong>: Visual options from specialised BI tools are missing, limiting visually complex analyses.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Data Modelling Knowledge Required</strong>: Its model-driven approach requires a basic understanding of data modelling, which could challenge users who lack experience in this field.</p></li></ul><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<a id="blazesql"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">BlazeSQL</strong>
+</h2>
+<p class="mt-3 text-xl leading-8"><a href="/" class="text-indigo-600">BlazeSQL is a SQL AI</a>-powered data analysis tool that simplifies accessing insights for all business teams. With BlazeSQL, users can ask questions in everyday language—as if chatting with a colleague—and get answers instantly, without SQL or technical skills. The tool connects directly to SQL databases, providing real-time data visualisations in a no-code environment that enhances the speed and ease of data-driven decision-making.</p>
+
+<p class="mt-3 text-xl leading-8">Ideal for product managers, marketers, sales teams, and operations, BlazeSQL fosters self-service BI, letting users explore and analyse data independently. It’s designed with collaboration in mind, offering features that allow easy sharing of insights, robust privacy protections, and a straightforward interface. Additionally, BlazeSQL is commonly recommended as an <a href="/blog/insightbase-alternative" class="text-indigo-600">InsightBase alternative</a>.</p>
+<a id="features"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Interactive Data Visualisation</strong>: BlazeSQL equips users with intuitive dashboards, allowing them to create line charts, bar charts, and other visual charts with ease.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">AI-Driven Chatbot</strong>: An AI chatbot that translates plain-language questions into SQL queries, making data insights accessible to users without technical expertise. This AI-driven interaction provides fast, actionable responses to natural language prompts.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Data Security</strong>: No sensitive data is processed on BlazeSQL’s servers. All data handling and analysis remain secure and within user-controlled environments.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Database Connectivity</strong>: Easily integrates with popular SQL databases, including Snowflake, Microsoft SQL Server, PostgreSQL, and others, so teams can connect their databases and start analysing data quickly.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Automated Reporting</strong>: BlazeSQL takes the hassle out of reporting with automatic reports so teams can stay in the loop without lifting a finger.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Team Collaboration</strong>: Built-in collaboration tools allow team members to collaborate on real-time data projects.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Supported Databases</strong>: BlazeSQL works with various databases, such as Snowflake, Microsoft SQL Server, PostgreSQL, BigQuery, MySQL, MariaDB, and AWS Redshift, making it versatile for different data ecosystems.</p></li></ul><a id="limitations"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Limitations</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Subscription-Based Model</strong>: A paid subscription is required to access BlazeSQL’s full capabilities, which may be a consideration for budget-conscious teams.</p></li></ul><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<a id="metabase"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">Metabase</strong>
+</h2>
+<p class="mt-3 text-xl leading-8">Metabase is a user-friendly, open-source BI platform that simplifies data exploration, especially for teams without technical expertise. With its no-code interface, Metabase allows users to build dashboards, create visualisations, and run ad-hoc queries without SQL knowledge. It’s an ideal tool for organisations aiming to make data insights accessible without a steep learning curve. Metabase offers versatile deployment options, from on-premises to cloud-based setups, and supports over 20 different data sources, including SQL databases, data warehouses, and cloud services. This flexibility seamlessly lets businesses connect to and analyse data from multiple sources, accelerating data-driven decision-making across teams.</p>
+<a id="features"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Flexible Querying Options</strong>: Metabase accommodates users of all technical backgrounds, offering both a SQL editor and a Notebook Editor for building advanced queries with filters, joins, aggregations, and variables. This versatility makes it accessible to everyone, from beginners to advanced users.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Data Visualisation</strong>: Metabase enhances data exploration with various visualisation options, including auto-refreshing dashboards that provide up-to-date insights. The intuitive design and visual suggestions make interpreting and interacting with data more accessible for teams.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Scheduled Reporting</strong>: Teams can stay informed with automated reporting by scheduling updates to be shared via URL, Slack, or email.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Embedded Analytics</strong>: In its Enterprise Edition, Metabase supports embedded analytics, allowing organisations to integrate analytics into third-party applications. This makes sharing insights across platforms streamlined and effective.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Comprehensive Database Support</strong>: Metabase is broadly compatible with a range of SQL and NoSQL databases, making it adaptable to diverse data ecosystems and allowing for flexible data connection options across organisations.</p></li></ul><a id="limitations"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Limitations</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">SQL Skills Required for Advanced Queries</strong>: While Metabase is accessible to beginners, more advanced query functionalities require some SQL proficiency, which may limit usability for teams without technical expertise.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Self-Hosting Support Limitations</strong>: Self-hosted Metabase instances come with limited support unless organisations purchase an additional support package. This could pose challenges for teams that need extra technical assistance to manage and troubleshoot their setup effectively.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Lacks Advanced Modelling and AI</strong>: Metabase is built primarily for business intelligence, lacking features for advanced data modelling, machine learning, or AI. This focus makes it less suitable for teams needing complex analytics or data science functionalities.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Restricted Sharing</strong>: Sharing reports with external stakeholders can be complicated, as recipients must have a Metabase account. This requirement may limit open data access across organisations and create additional steps for external report access.</p></li></ul><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<a id="redash"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  Redash
+</h2>
+<p class="mt-3 text-xl leading-8">Redash is an open-source BI tool tailored to simplify data querying and visualisation for non-technical users through a clean, SQL-friendly interface. It’s built for teams looking for straightforward analytics, providing real-time visualisations and collaborative dashboards without extra frills. Redash supports various data sources and integrates smoothly with SQL and NoSQL databases, allowing teams to create scheduled reports and set up data-driven alerts. With deployment options for both on-premises and cloud setups, Redash offers flexibility to suit different IT environments.</p>
+<a id="features"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Features
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Advanced Query Editor</strong>: Redash features a versatile query editor that works with both SQL and NoSQL databases. It allows users to create parameterised queries for customisable, reusable reports. This flexibility makes it easier to tailor insights to specific needs without repetitive query building.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Visualisation Options</strong>: With a rich library of visualisation options—ranging from bar and line charts to tables and geographic maps—Redash enables users to convert data into clear, actionable visuals that support better decision-making.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Interactive Dashboards</strong>: Redash empowers users to build interactive, real-time dashboards by combining multiple visualisations. These dashboards allow for dynamic reporting, are easy to share, and encourage team collaboration on data insights.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Report Sharing and Embedding</strong>: Distributing insights is straightforward in Redash. You can share reports through links, embed dashboards, and access collaborative tools that streamline the team's access to data sources and queries.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Scheduled Queries and Alerts</strong>: Redash offers scheduled query updates, with automated reports sent via email or Slack. Custom alerts can be set to notify teams when specific data conditions are met, ensuring that everyone stays informed with relevant, timely data.</p></li></ul><a id="limitations"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Limitations
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">SQL Knowledge Required</strong>: Redash’s reliance on SQL for complex queries may make it challenging for non-technical users to fully exploit its potential, as advanced analytics still require SQL proficiency.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Basic Visualisation</strong>: Redash provides core visualisation features but lacks some more advanced customisation options in other BI tools. Users seeking extensive customisation may need technical expertise to achieve specific visualisation needs.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">No Built-in Data Modelling</strong>: Redash does not include data modelling functions, which means users may need to rely on external tools to prepare data for analysis, adding extra steps to the process.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Limited User Management and Security: </strong>With basic user management and role-based access control, Redash may not meet the needs of larger enterprises requiring more advanced security and permission settings for comprehensive data governance.</p></li></ul><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<a id="power-bi"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  Power BI
+</h2>
+<p class="mt-3 text-xl leading-8">Power BI is Microsoft’s powerhouse for business intelligence, designed to fit seamlessly into organisations already using Microsoft tools. It’s built for those who want to dive deep into their data—Power BI’s advanced DAX (Data Analysis Expressions) capabilities let users go beyond basic SQL, making it easy to uncover trends and insights in complex datasets. Interactive dashboards and customisable visuals make reporting both accessible and insightful.</p>
+
+<p class="mt-3 text-xl leading-8">With smooth integrations with apps like Excel, Azure, and Teams, Power BI helps teams keep their data workflows streamlined and collaborative. Plus, it’s flexible enough to work on-premises or in the cloud. It can grow alongside your organisation, helping everyone from small teams to large enterprises quickly make data-driven decisions.</p>
+<a id="features"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Features
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Drag-and-Drop Interface</strong>: Power BI’s intuitive drag-and-drop setup makes it easy for users of all skill levels to create reports and dashboards quickly. Whether you’re a beginner or a data expert, this user-friendly design simplifies building powerful insights.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Scalable Dashboards</strong>: Power BI allows teams to create dashboards that can scale seamlessly, accommodating large organisations with complex data and multiple users. This scalability supports enterprise-wide insights that can adapt as data needs grow.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Advanced Visualisations</strong>: Offering a wide range of visualisation options, Power BI enables highly customisable visuals that allow teams to craft branded, detailed, and complex representations to suit unique business requirements.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Extensive Integrations</strong>: Integrated deeply with Microsoft Office tools like Excel and Teams, Power BI simplifies data sharing and collaboration, fitting seamlessly into many businesses that already rely on the Microsoft ecosystem.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Collaboration Tools</strong>: Power BI dashboards, and reports are built with collaboration in mind, featuring tools that make it easy for teams to collaborate and share insights. This is especially valuable in larger organisations where teamwork is key.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Data Connectivity</strong>: Power BI supports various data sources, simplifying data import and analysis. It’s compatible with most SQL and NoSQL databases, making it adaptable to environments with a variety of databases.</p></li></ul><a id="limitations"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Limitations
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Proprietary DAX Language</strong>: Power BI relies on DAX (Data Analysis Expressions) for advanced analytics, which can pose a learning curve for new users. For those unfamiliar with DAX, becoming proficient may require time and practice, making it a potential hurdle for teams new to the platform.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Data Preparation Needs</strong>: Power BI performs optimally with well-organised, clean data to get the best results. If source data is unstructured, extra effort may be needed for data cleaning and preparation, which can add time to the analysis process.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Limited Non-Windows Support</strong>: Power BI is optimised for Windows, so some features and functions are limited to other operating systems. Mac users, in particular, may find fewer seamless options, which can be challenging for teams outside the Windows ecosystem.</p></li></ul><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+
+                      </div>
+                  </div>
+                </div>
+          </div>
+
+      <footer class="bg-dark-bg">
+      <div
+        class="md:border-b border-spacing-0.5 border-[#ffffff1f] pt-16 pb-0 md:py-10"
+      >
+        <div class="container-center">
+          <div class="flex items-center justify-between w-full">
+            <div class="flex items-center gap-2 lg:gap-3">
+              <img
+                src="../images/blazeql-white.svg"
+                alt="blazesql"
+                loading="lazy"
+              />
+              <p class="text-xl -tracking-0.4 text-white font-semibold">
+                BlazeSQL
+              </p>
+            </div>
+
+            <div class="items-center justify-end hidden w-full gap-3 md:flex">
+              <a
+                href="#"
+                class="book_demo text-white btn-main btn-secondary btn-md border-white-12 hover:border-white-40"
+              >
+                Book a demo
+              </a>
+              <a href="#" class="text-white btn-main btn-primary btn-md">
+                Get started
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full pt-16 pb-16 md:pb-40 md:pt-20">
+        <div class="container-center">
+          <div
+            class="grid grid-cols-2 gap-y-16 md:gap-y-10 gap-x-10 md:gap-x-5 lg:gap-x-10 md:grid-cols-3"
+          >
+            <!-- Item -->
+            <div>
+              <p class="mb-6 md:mb-4 overline-text text-white/55">
+                Information
+              </p>
+              <ul class="flex flex-col gap-6 md:gap-4">
+                <li>
+                  <a href="#" class="footer-link">Pricing - Teams</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Pricing - Individual</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Data Privacy</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Item -->
+            <div>
+              <p class="mb-6 md:mb-4 overline-text text-white/55">Blog</p>
+              <ul class="flex flex-col gap-6 md:gap-4">
+                <li>
+                  <a href="#" class="footer-link"
+                    >Connect ChatGPT to Snowflake</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-link">SQL Data Visualization</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link"
+                    >No code business intelligence</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Item -->
+            <div class="col-span-2 md:col-auto">
+              <p class="mb-6 md:mb-4 overline-text text-white/55">Product</p>
+              <ul class="flex flex-col gap-6 md:gap-4">
+                <li>
+                  <a href="#" class="footer-link"
+                    >AI-Powered No code Dashboard Builder</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block pb-16 md:hidden">
+        <div class="container-center">
+          <div class="grid w-full grid-cols-2 gap-3">
+            <button
+              type="button"
+              class="book_demo w-full text-white btn-main btn-secondary btn-md border-white-12 hover:border-white-40"
+            >
+              Book a demo
+            </button>
+            <button
+              type="button"
+              class="w-full text-white btn-main btn-primary btn-md"
+            >
+              Get started
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-spacing-0.5 border-[#ffffff1f] py-10 md:py-6">
+        <div class="container-center">
+          <p class="text-[#ffffff8f]">
+            © <span class="current-year">2024</span> BlazeSQL, Inc. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../store_gclid.js"></script>
+    <script src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
+    <script>
+      const videos = document.querySelectorAll("video[data-autoplay]");
+
+      videos.forEach((video) => {
+        if (video.isIntersecting) {
+          video.play();
+        }
+      });
+
+      let observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.play();
+            } else {
+              entry.target.pause();
+            }
+          });
+        },
+        {
+          /* options */
+        }
+      );
+
+      videos.forEach((video) => observer.observe(video));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="e4774817-fdf9-4bf4-a036-7baae3f41bd2"
+      data-blockingmode="auto"
+      type="text/javascript"
+    ></script>
+    <script src="../gtm.js"></script>
+    <meta
+      property="og:image"
+      content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1440" />
+    <meta property="og:image:height" content="1024" />
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover the 10 best business intelligence tools for MS SQL Server. Find the perfect tool to simplify data analysis and get AI-driven insights today!" />
+    <!-- Google tag (gtag.js) -->
+    <link href="../output.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/favicon1-32x32.png" type="image/png" />
+    <link rel="icon" href="../images/favicon1.ico" type="image/x-icon" />
+
+    <title>Top 10 Business Intelligence Tools for MS SQL Server</title>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "iilxk31jtt");
+    </script>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- mobile nav bar -->
+    <script type="text/javascript">
+      const togglerButton = document.querySelector(".open-navbar");
+      const mobileNavbar = document.getElementById("mobile-navbar");
+      const body = document.body;
+
+      const openIcon = document.querySelector(".open-icon");
+      const closeIcon = document.querySelector(".close-icon");
+
+      function toggleNavbar() {
+        mobileNavbar.classList.toggle("hidden");
+        openIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("block");
+        body.classList.toggle("no-scroll");
+      }
+
+      togglerButton.addEventListener("click", toggleNavbar);
+
+      closeIcon.addEventListener("click", () => {
+        mobileNavbar.classList.add("hidden");
+        openIcon.classList.remove("hidden");
+        body.classList.remove("no-scroll");
+      });
+    </script>
+
+    <!-- table content -->
+    <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggleButton");
+    const tableOfContentBody = document.getElementById("tableOfContentBody");
+    const contentGridPanels = document.querySelectorAll(".content_grid_panel");
+    const toggleContentLinks = document.querySelectorAll(".toggleContentGridPanel");
+    const arrowIcons = document.querySelectorAll(".title_arrow img");
+
+ function isMobileDevice() {
+          return window.innerWidth <= 992;
+        }
+
+    function updateArrowIcons() {
+        arrowIcons.forEach((arrow) => {
+            const parentLink = arrow.closest(".toggleContentGridPanel");
+            const targetId = parentLink.getAttribute("data-target");
+            const targetPanel = document.getElementById(targetId);
+
+            if (targetPanel.style.display === "block") {
+                arrow.classList.add("rotate");
+            } else {
+                arrow.classList.remove("rotate");
+            }
+        });
+    }
+
+
+    function updateToggleButtonIcon(isVisible) {
+      const toggleImg = toggleButton.querySelector("img");
+      if (isVisible) {
+        toggleImg.src = "../images/minus_icon-svg.svg";
+        toggleButton.classList.remove("plus-icon");
+      } else {
+        toggleImg.src = "../images/plus_icon-svg.svg";
+        toggleButton.classList.add("plus-icon");
+      }
+    }
+
+  toggleButton.addEventListener("click", () => {
+          const isVisible = tableOfContentBody.style.display !== "none";
+          tableOfContentBody.style.display = isVisible ? "none" : "block";
+          updateToggleButtonIcon(!isVisible);
+          updateArrowIcons();
+        });
+
+
+
+    toggleContentLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("data-target");
+            const targetPanel = document.getElementById(targetId);
+            const isPanelVisible = targetPanel.style.display === "block";
+
+            contentGridPanels.forEach((panel) => {
+                panel.style.display = "none";
+            });
+
+            targetPanel.style.display = isPanelVisible ? "none" : "block";
+
+            updateArrowIcons();
+        });
+    });
+
+ if (isMobileDevice()) {
+          tableOfContentBody.style.display = "none";
+          updateToggleButtonIcon(false);
+          contentGridPanels.forEach((panel) => {
+            panel.style.display = "none";
+          });
+        } else {
+          tableOfContentBody.style.display = "block";
+          updateToggleButtonIcon(true);
+          contentGridPanels.forEach((panel, index) => {
+            panel.style.display = index === 0 ? "block" : "none";
+          });
+        }
+
+        window.addEventListener("resize", () => {
+          if (isMobileDevice()) {
+            tableOfContentBody.style.display = "none";
+            updateToggleButtonIcon(false);
+            contentGridPanels.forEach((panel) => {
+              panel.style.display = "none";
+            });
+          } else {
+            tableOfContentBody.style.display = "block";
+            updateToggleButtonIcon(true);
+            contentGridPanels.forEach((panel, index) => {
+              panel.style.display = index === 0 ? "block" : "none";
+            });
+          }
+          updateArrowIcons();
+        });
+      });
+
+// TOC specific functionality
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.table_of_content a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+
+            // Only prevent default behavior for internal links that start with '#'
+            if (href.startsWith('#')) {
+                e.preventDefault(); // Prevent the default anchor click behavior for TOC links
+
+                const targetId = href.substring(1); // Get the ID from the href
+                const targetElement = document.getElementById(targetId); // Find the target element by ID
+
+                const headerOffset = document.querySelector('.sticky').offsetHeight; // Adjust this selector to match your header class
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerOffset;
+
+                // Scroll to the target element with smooth behavior
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+// Clipboard functionality remains unchanged
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('URL copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+
+
+
+    </script>
+
+  </head>
+  <body>
+
+        <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+          <defs>
+            <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+             <path d="M.5 200V.5H200" fill="none" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
+        </svg>
+
+      <!-- add header -->
+
+      <header
+      class="sticky top-0 z-50 py-3 bg-white md:py-6 md:border-b border-black-8"
+    >
+      <div class="container-center">
+        <nav class="relative z-0 flex items-center justify-between">
+          <a
+            href="https://www.blazesql.com"
+            class="flex items-center gap-2 lg:gap-3 hover-opacity"
+          >
+            <img src="../images/blazesql.svg" alt="BlazeSQL logo" />
+            <p class="text-xl -tracking-0.4 font-semibold text-[#5850ec]">
+              BlazeSQL
+            </p>
+          </a>
+
+          <ul class="items-center hidden md:gap-5 lg:gap-10 md:flex">
+            <li>
+              <a
+                href="https://www.blazesql.com/privacy.html"
+                class="font-medium capitalize label-s cs-animate hover:text-[#5850ec] text-black-100"
+                >Privacy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-medium capitalize label-s cs-animate hover:text-[#5850ec] text-black-100"
+                >White-label &amp; embed</a
+              >
+            </li>
+            <li class="relative z-0 navbar-dropdown group">
+              <a
+                href="#"
+                class="flex items-center font-medium capitalize label-s cs-animate hover:text-[#5850ec] text-black-100 group"
+              >
+                Pricing
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  class="group-hover:rotate-180 cs-animate"
+                  fill="none"
+                >
+                  <path d="M17 10H7L12 16L17 10Z" fill="currentcolor"></path>
+                </svg>
+              </a>
+              <div
+                class="absolute hidden w-40 pt-2 -translate-x-1/2 left-1/2 top-full group-hover:block"
+              >
+                <div
+                  class="p-1 bg-white border rounded-lg border-black-12 shadow-nav-dropdown backdrop-blur-32"
+                >
+                  <ul>
+                    <li>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-black-100 text-sm cs-animate font-medium -tracking-0.14 hover:bg-[#4e4a9b1f] p-3 rounded hover:text-[#4e4a9b]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.99292 11.6719C10.0671 11.6719 12.6946 12.1377 12.6946 13.9985C12.6946 15.8594 10.0846 16.3385 6.99292 16.3385C3.91792 16.3385 1.29125 15.8769 1.29125 14.0152C1.29125 12.1535 3.90042 11.6719 6.99292 11.6719Z"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.99292 9.01634C4.97459 9.01634 3.33792 7.38051 3.33792 5.36217C3.33792 3.34384 4.97459 1.70801 6.99292 1.70801C9.01042 1.70801 10.6471 3.34384 10.6471 5.36217C10.6546 7.37301 9.02959 9.00884 7.01875 9.01634H6.99292Z"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M12.7359 8.06741C14.0701 7.87991 15.0976 6.73491 15.1001 5.34908C15.1001 3.98324 14.1042 2.84991 12.7984 2.63574"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M14.4962 11.2764C15.7887 11.4689 16.6912 11.9222 16.6912 12.8555C16.6912 13.498 16.2662 13.9147 15.5795 14.1755"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                        For teams
+                      </a>
+                      <a
+                        href="#"
+                        class="flex items-center gap-2 text-black-100 text-sm cs-animate font-medium -tracking-0.14 hover:bg-[#4e4a9b1f] p-3 rounded hover:text-[#4e4a9b]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="18"
+                          viewBox="0 0 14 18"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.9873 11.7891C3.76428 11.7891 1.0119 12.2764 1.0119 14.228C1.0119 16.1795 3.74682 16.6843 6.9873 16.6843C10.2103 16.6843 12.9619 16.1962 12.9619 14.2454C12.9619 12.2946 10.2278 11.7891 6.9873 11.7891Z"
+                            stroke="currentcolor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.9873 9.00523C9.10238 9.00523 10.8167 7.29015 10.8167 5.17507C10.8167 3.05999 9.10238 1.3457 6.9873 1.3457C4.87222 1.3457 3.15714 3.05999 3.15714 5.17507C3.15 7.283 4.85317 8.99808 6.96032 9.00523H6.9873Z"
+                            stroke="currentcolor"
+                            stroke-width="1.42857"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                        For individuals
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="items-center hidden gap-4 md:flex">
+            <button
+              type="button"
+              class="border-transparent btn-main btn-secondary"
+            >
+              Book a demo
+            </button>
+            <button type="button" class="btn-main btn-primary">
+              Get started
+            </button>
+          </div>
+
+          <!-- Navbar mobile -->
+          <button
+            type="button"
+            class="block hover-opacity md:hidden open-navbar focus:outline-none"
+          >
+            <svg
+              class="open-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M2 8H22M22 16H2"
+                stroke="#0F0F10"
+                stroke-width="1.5"
+              ></path>
+            </svg>
+          </button>
+
+          <div
+            id="mobile-navbar"
+            class="hidden fixed top-0 left-0 flex flex-col items-center justify-between w-full h-full bg-white"
+          >
+            <div class="container-center">
+              <div class="flex items-center justify-between py-3 w-full">
+                <a
+                  href="https://www.blazesql.com"
+                  class="flex items-center gap-2 lg:gap-3 hover-opacity"
+                >
+                  <img src="../images/blazesql.svg" alt="BlazeSQL logo" />
+                  <p class="text-xl -tracking-0.4 font-semibold text-[#5850ec]">
+                    BlazeSQL
+                  </p>
+                </a>
+                <button type="button" class="block focus:outline-none">
+                  <!-- Close Icon (Initially hidden) -->
+                  <svg
+                    class="close-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M5 5L19 19M19 5L5 19"
+                      stroke="#0F0F10"
+                      stroke-width="1.5"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <ul
+              class="flex flex-col items-start flex-1 w-full gap-10 px-4 mt-10"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="capitalize cs-animate hover:text-[#5850ec] text-black-100"
+                  >Privacy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="capitalize cs-animate hover:text-[#5850ec] text-black-100"
+                  >White-label &amp; embed</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="capitalize cs-animate hover:text-[#5850ec] text-black-100"
+                  >Pricing for teams</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="capitalize cs-animate hover:text-[#5850ec] text-black-100"
+                  >Pricing for individuals</a
+                >
+              </li>
+            </ul>
+            <div
+              class="flex items-center justify-between w-full gap-3 px-4 py-10 border-t border-black-12"
+            >
+              <button type="button" class="w-full btn-main btn-primary">
+                Get started
+              </button>
+              <button
+                type="button"
+                class="w-full btn-main btn-secondary border-[#0f0f101f]"
+              >
+                Book a demo
+              </button>
+            </div>
+          </div>
+          <!-- Navbar mobile -->
+        </nav>
+      </div>
+    </header>
+
+         <!-- Main Wrapper -->
+          <div class="container_warpper_content container-center flex justify-between sticky_relative">
+             <!-- TOC -->
+                <div class="table_of_content w-[27%] h-fit">
+    <div class="table_of_content_inner">
+        <div class="content_head" id="toggleButton">
+            <h5 class="main_title">Table of contents</h5>
+            <div class="toggle">
+                <img src="../images/minus_icon-svg.svg" alt="minus icon logo" />
+            </div>
+        </div>
+        <div class="table_of_content_body" id="tableOfContentBody">
+            
+                <div class="content_body_grid">
+                    <a href="#list-of-the-top-business-intelligence-tools-for-ms-sql-server" class="toggleContentGridPanel" data-target="panel1">
+                        <div class="table_title">
+                            List of The Top Business Intelligence Tools for MS SQL Server
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel1">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#list-of-the-top-business-intelligence-tools-for-ms-sql-server">List of The Top Business Intelligence Tools for MS SQL Server</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#1.-blazesql" class="toggleContentGridPanel" data-target="panel2">
+                        <div class="table_title">
+                            1. BlazeSQL
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel2">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#1.-blazesql">1. BlazeSQL</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-blazesql" >Features of BlazeSQL</a>
+                                    
+                                        <a href="#blazesql-pricing" >BlazeSQL Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-blazesql" >Final Verdict on BlazeSQL</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#2.-microsoft-power-bi" class="toggleContentGridPanel" data-target="panel3">
+                        <div class="table_title">
+                            2. Microsoft Power BI
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel3">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#2.-microsoft-power-bi">2. Microsoft Power BI</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-microsoft-power-bi" >Features of Microsoft Power BI</a>
+                                    
+                                        <a href="#microsoft-power-bi-pricing" >Microsoft Power BI Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-microsoft-power-bi" >Final Verdict on Microsoft Power BI</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#3.-sisense" class="toggleContentGridPanel" data-target="panel4">
+                        <div class="table_title">
+                            3. Sisense
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel4">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#3.-sisense">3. Sisense</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-sisense" >Features of Sisense</a>
+                                    
+                                        <a href="#sisense-pricing" >Sisense Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-sisense" >Final Verdict on Sisense</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#4.-domo" class="toggleContentGridPanel" data-target="panel5">
+                        <div class="table_title">
+                            4. Domo
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel5">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#4.-domo">4. Domo</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-domo" >Features of Domo</a>
+                                    
+                                        <a href="#domo-pricing" >Domo Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-domo" >Final Verdict on Domo</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#5.-tableau" class="toggleContentGridPanel" data-target="panel6">
+                        <div class="table_title">
+                            5. Tableau
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel6">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#5.-tableau">5. Tableau</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-tableau" >Features of Tableau</a>
+                                    
+                                        <a href="#tableau-pricing" >Tableau Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-tableau" >Final Verdict on Tableau</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#6.-holistics" class="toggleContentGridPanel" data-target="panel7">
+                        <div class="table_title">
+                            6. Holistics
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel7">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#6.-holistics">6. Holistics</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-holistics" >Features of Holistics</a>
+                                    
+                                        <a href="#holistics-pricing" >Holistics Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-holistics" >Final Verdict on Holistics</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#7.-metabase" class="toggleContentGridPanel" data-target="panel8">
+                        <div class="table_title">
+                            7. Metabase
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel8">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#7.-metabase">7. Metabase</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-metabase" >Features of Metabase</a>
+                                    
+                                        <a href="#metabase-pricing" >Metabase Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-metabase" >Final Verdict on Metabase</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#8.-aqua-data-studio" class="toggleContentGridPanel" data-target="panel9">
+                        <div class="table_title">
+                            8. Aqua Data Studio
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel9">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#8.-aqua-data-studio">8. Aqua Data Studio</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-aqua-data-studio" >Features of Aqua Data Studio</a>
+                                    
+                                        <a href="#aqua-data-studio-pricing" >Aqua Data Studio Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-aqua-data-studio" >Final Verdict on Aqua Data Studio</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#9.-microstrategy" class="toggleContentGridPanel" data-target="panel10">
+                        <div class="table_title">
+                            9. MicroStrategy
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel10">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#9.-microstrategy">9. MicroStrategy</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-microstrategy" >Features of MicroStrategy</a>
+                                    
+                                        <a href="#microstrategy-pricing" >MicroStrategy Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-microstrategy" >Final Verdict on MicroStrategy</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#10.-thoughtspot" class="toggleContentGridPanel" data-target="panel11">
+                        <div class="table_title">
+                            10. ThoughtSpot
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel11">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#10.-thoughtspot">10. ThoughtSpot</a>
+                            </div>
+                            
+                                <div class="panel_title">
+                                    
+                                        <a href="#features-of-thoughtspot" >Features of ThoughtSpot</a>
+                                    
+                                        <a href="#thoughtspot-pricing" >ThoughtSpot Pricing</a>
+                                    
+                                        <a href="#customer-support" >Customer Support</a>
+                                    
+                                        <a href="#other-supported-databases" >Other Supported Databases</a>
+                                    
+                                        <a href="#final-verdict-on-thoughtspot" >Final Verdict on ThoughtSpot</a>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="content_body_grid">
+                    <a href="#conclusion" class="toggleContentGridPanel" data-target="panel12">
+                        <div class="table_title">
+                            Conclusion
+                            <div class="title_arrow">
+                                <img src="../images/arrow_toggle_icon.svg" alt="minus icon logo" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content_grid_panel" id="panel12">
+                        <div class="content_grid_panel_inner">
+                            <div class="panel_title">
+                                <a href="#conclusion">Conclusion</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="social_icon_share">
+        <a href="https://twitter.com/intent/tweet?text=https://www.blazesql.com/blog/sql-server-business-intelligence-tools" target="_blank">
+            <img src="../images/twitter.svg" alt="Twitter" />
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.blazesql.com/blog/sql-server-business-intelligence-tools" target="_blank">
+            <img src="../images/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="mailto:?body=https://www.blazesql.com/blog/sql-server-business-intelligence-tools" target="_blank">
+            <img src="../images/mail.svg" alt="Mail" />
+        </a>
+
+        <a onclick="copyToClipboard('https://www.blazesql.com/blog/sql-server-business-intelligence-tools')" target="_blank">
+            <img src="../images/clipboard.svg" alt="Clipboard" />
+        </a>
+    </div>
+
+</div>
+                <!-- Main Content -->
+                <div class="main_page_content text-base leading-7 text-gray-700 w-[73%] ml-20" >
+                  <div class="px-6 py-16 lg:px-8 pt-0">
+                      <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+                         <a id="10-best-business-intelligence-tools-for-ms-sql-server"></a><h1
+  class="mt-16 mb-4 text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+>
+  <strong class="font-semibold">10 Best Business Intelligence Tools for MS SQL Server</strong>
+</h1>
+<p class="mt-3 text-xl leading-8">When working with SQL Server business intelligence tools, having the right solutions can make data analysis easier and faster. These tools help businesses turn raw data into valuable insights, making decision-making more efficient.</p>
+
+<p class="mt-3 text-xl leading-8">In this blog, we’ll explore some of the best SQL Server BI tools available. Each tool is designed to help you visualize and analyze large amounts of data with ease, ensuring that your organization can extract meaningful insights quickly.</p>
+<a id="list-of-the-top-business-intelligence-tools-for-ms-sql-server"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">List of The Top Business Intelligence Tools for MS SQL Server</strong>
+</h2>
+<p class="mt-3 text-xl leading-8">1. BlazeSQL</p>
+
+<p class="mt-3 text-xl leading-8">2. Microsoft Power BI</p>
+
+<p class="mt-3 text-xl leading-8">3. Sisense</p>
+
+<p class="mt-3 text-xl leading-8">4. Domo</p>
+
+<p class="mt-3 text-xl leading-8">5. Tableau </p>
+
+<p class="mt-3 text-xl leading-8">6. Holistics</p>
+
+<p class="mt-3 text-xl leading-8">7. Metabase</p>
+
+<p class="mt-3 text-xl leading-8">8. Aqua Data Studio</p>
+
+<p class="mt-3 text-xl leading-8">9. MicroStrategy</p>
+
+<p class="mt-3 text-xl leading-8">10. ThoughtSpot</p>
+<a id="1.-blazesql"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">1. BlazeSQL</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-16" style="margin-bottom: 4rem">
+  <video
+    class="bg-gray-50 rounded-md gif-button"
+    src="../images/cms-1.mp4"
+    alt="BlazeSQL"
+    autoplay
+    muted
+    
+    loop
+  ></video>
+  <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+    <svg
+      class="mt-0.5 h-5 w-5 flex-none text-gray-300"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+    BlazeSQL
+  </figcaption>
+</figure>
+
+<p class="mt-3 text-xl leading-8"><a href="https://www.blazesql.com/" class="text-indigo-600">BlazeSQL</a> is an AI-powered analytics platform designed to simplify data analysis for business professionals. It uses natural language processing to generate SQL queries, visualize data, and automate reporting, making it accessible for both technical and non-technical users. With its intuitive chatbot, users can easily obtain deeper insights by simply asking questions, eliminating the need for coding expertise. </p>
+
+<p class="mt-3 text-xl leading-8">BlazeSQL's focus on ease of use, combined with its integration with MS SQL databases, ensures that users can quickly turn complex data into actionable visual reports and dashboards.</p>
+<a id="features-of-blazesql"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of BlazeSQL</strong>
+</h3><a id="1.-data-visualizations"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Data Visualizations</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">BlazeSQL transforms SQL data into graphs and charts, allowing business analysts to interpret complex datasets visually. This feature enhances data comprehension and supports informed decision-making.</p>
+<a id="2.-ai-analytics-assistant"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. AI Analytics Assistant</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-16" style="margin-bottom: 4rem">
+  <video
+    class="bg-gray-50 rounded-md gif-button"
+    src="../images/cms-2.mp4"
+    alt="AI Analytics Assistant"
+    autoplay
+    muted
+    
+    loop
+  ></video>
+  <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+    <svg
+      class="mt-0.5 h-5 w-5 flex-none text-gray-300"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+    BlazeSQL AI Analytics Assistant
+  </figcaption>
+</figure>
+
+<p class="mt-3 text-xl leading-8">BlazeSQL offers an AI assistant that not only runs SQL queries but also helps interpret results and generates visual reports. This feature simplifies the analytical process, making accessing business intelligence easier for non-technical users.</p>
+<a id="3.-data-security"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. Data Security</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">BlazeSQL ensures data security with advanced encryption and access controls. Analysts can trust that their data is protected throughout the entire analysis process.</p>
+<a id="4.-ai-generated-weekly-reports"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. AI-Generated Weekly Reports</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">BlazeSQL automates the reporting process by generating weekly summaries of your data. This allows you to keep track of trends and changes in your data without manual effort.</p>
+<a id="5.-sql-writer-with-natural-language-processing"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">5. SQL Writer with Natural Language Processing</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-16" style="margin-bottom: 4rem">
+  <video
+    class="bg-gray-50 rounded-md gif-button"
+    src="../images/cms-4.mp4"
+    alt="SQL Writer with Natural Language Processing"
+    autoplay
+    muted
+    
+    loop
+  ></video>
+  <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+    <svg
+      class="mt-0.5 h-5 w-5 flex-none text-gray-300"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+    BlazeSQL SQL Writer with Natural Language Processing
+  </figcaption>
+</figure>
+
+<p class="mt-3 text-xl leading-8">This feature enables you to <a href="https://www.blazesql.com/sql-writer" class="text-indigo-600">write SQL queries</a> through simple, natural language inputs. BlazeSQL’s AI interprets your requests and transforms them into complex SQL queries, saving time and reducing errors.</p>
+<a id="6.-customizable-dashboards"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">6. Customizable Dashboards</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-16" style="margin-bottom: 4rem">
+  <video
+    class="bg-gray-50 rounded-md gif-button"
+    src="../images/cms-6.mp4"
+    alt="Customizable Dashboards"
+    autoplay
+    muted
+    
+    loop
+  ></video>
+  <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+    <svg
+      class="mt-0.5 h-5 w-5 flex-none text-gray-300"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+    BlazeSQL Customizable Dashboards
+  </figcaption>
+</figure>
+
+<p class="mt-3 text-xl leading-8">BlazeSQL provides dashboards that let you visualize your data. The dashboards are easy to customize and allow for real-time interaction, enabling quick analysis and decision-making.</p>
+<a id="blazesql-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">BlazeSQL Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Blaze Pro:</strong> $39/month</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Blaze Advanced:</strong> $99/month</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Blaze Team:</strong> $149/month (starting for 3 users)</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Blaze Enterprise:</strong> <a href="https://www.blazesql.com/blaze-pricing.html" class="text-indigo-600">Custom pricing</a> based on needs</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Web support</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Snowflake</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">PostgreSQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MariaDB </p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">AWS Redshift</p></li></ul><a id="final-verdict-on-blazesql"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on BlazeSQL</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">BlazeSQL stands out as a BI tool for managing large datasets within SQL Server, offering AI-driven reporting, SQL automation, and intuitive dashboards. It simplifies data analysis for business users by reducing manual work and providing real-time insights. The AI Analytics Assistant enhances productivity by automating routine tasks and handling complex queries efficiently.</p>
+
+<p class="mt-3 text-xl leading-8">Discover efficient data management with BlazeSQL—<a href="https://www.blazesql.com/app/" class="text-indigo-600"><em>get started</em></a><em> today!</em></p>
+<a id="2.-microsoft-power-bi"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">2. Microsoft Power BI</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-38396image21.png" alt="Microsoft Power BI" />
+</figure>
+
+<p class="mt-3 text-xl leading-8"><a href="https://www.microsoft.com/en-us/sql-server/sql-business-intelligence" class="text-indigo-600">Microsoft Power BI</a> is one of the most widely used business intelligence platforms designed to help organizations transform their raw data into actionable insights. With built-in tools for data integration, reporting, and analysis, it offers everything needed to streamline data-driven decision-making. </p>
+
+<p class="mt-3 text-xl leading-8">Power BI connects to SQL Server through an on-premises data gateway, enabling secure real-time data access and analysis. It includes features like SQL Server Analysis Services (SSAS) for data mining, SQL Server Reporting Services (SSRS) for interactive reports, and SQL Server Integration Services (SSIS) for data transformation and migration. These tools enable businesses to create detailed visualizations, automate reporting processes, and leverage advanced analytics to improve performance across all departments.</p>
+<a id="features-of-microsoft-power-bi"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of Microsoft Power BI</strong>
+</h3><a id="1.-data-connectivity"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Data Connectivity</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-48102image16.png" alt="Data Connectivity" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Power BI connects to a wide range of data sources, including MS SQL Server, Excel, and cloud services. This connectivity makes it a flexible tool for combining data from different systems.</p>
+<a id="2.-dashboards"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. Dashboards</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-485734image22.png" alt="Dashboards" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Power BI allows users to create dashboards with real-time data. These dashboards are customizable and can be shared across teams, making collaboration easy.</p>
+<a id="3.-ai-insights"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. AI Insights</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-27309image5.png" alt="AI Insights" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">With built-in AI features, Power BI helps users uncover patterns in their data. This includes natural language querying, where users can ask questions and get instant answers from their datasets.</p>
+<a id="4.-data-modeling-tools"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. Data Modeling Tools</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Power BI provides strong data modeling capabilities, allowing users to create relationships between datasets and design comprehensive reports that span multiple data sources.</p>
+<a id="5.-integration-with-ms-sql-server"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">5. Integration with MS SQL Server</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-12135image19.png" alt="Integration with MS SQL Server" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Power BI works with MS SQL Server, making it an excellent choice for SQL users who need advanced data visualization without leaving their existing ecosystem.</p>
+<a id="microsoft-power-bi-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Microsoft Power BI Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Power BI Pro: $10/user/month</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Power BI Premium: $20/user/month</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Free Tier available for individual users with limited features</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Business Assistant</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Web support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Azure SQL Database</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">PostgreSQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Oracle</p></li></ul><a id="final-verdict-on-microsoft-power-bi"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on Microsoft Power BI</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">Microsoft Power BI offers a suite of business intelligence tools with advanced data visualization, AI-powered insights, and seamless integration with MS SQL Server. It’s perfect for teams that need deep data analysis capabilities without stepping out of the Microsoft ecosystem.</p>
+<a id="3.-sisense"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">3. Sisense</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-7277image32.png" alt="Sisense" />
+</figure>
+
+<p class="mt-3 text-xl leading-8"><a href="https://www.sisense.com/" class="text-indigo-600">Sisense </a>allows integration with Microsoft SQL Server, enabling users to easily connect and analyze data from their SQL databases. By using Sisense, you can quickly pull in data from SQL Server, combine it with other data sources, and create dashboards and visualizations. </p>
+
+<p class="mt-3 text-xl leading-8">This connection supports both live data querying and scheduled data imports, giving users flexibility in handling large datasets. Sisense’s user-friendly interface and SQL support make it an efficient tool for building real-time insights and comprehensive business intelligence from SQL Server data without requiring complex technical setups.</p>
+<a id="features-of-sisense"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of Sisense</strong>
+</h3><a id="1.-secure-ssh-and-firewall-configurations"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Secure SSH and Firewall Configurations</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-49423image31.png" alt="Secure SSH and Firewall Configurations" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">The platform supports secure SSH tunneling and firewall configurations, ensuring safe data transfer and protection during connections.</p>
+<a id="2.-mixed-mode-authentication"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. Mixed Mode Authentication</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Sisense supports both SQL Server and Windows Authentication (Mixed Mode), enabling flexible and secure access control for users.</p>
+<a id="3.-data-level-permissions"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. Data-Level Permissions</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-115916image13.png" alt="Data-Level Permissions" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Granular control of data-level permissions ensures that only authorized users can view or modify sensitive information within SQL Server databases.</p>
+<a id="4.-custom-sql-and-code-support"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. Custom SQL and Code Support</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Users can write and execute custom SQL queries directly within Sisense, enabling advanced data manipulation and insights tailored to specific needs.</p>
+<a id="5.-advanced-query-management"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">5. Advanced Query Management</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Sisense simplifies the management of complex queries, optimizing performance and reducing the time needed for data extraction and analysis.</p>
+<a id="6.-cloud-data-pipelines-integration"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">6. Cloud Data Pipelines Integration</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Sisense integrates with cloud data pipelines, allowing users to merge SQL Server data with other cloud sources for comprehensive analytics.</p>
+<a id="sisense-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Sisense Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Custom pricing based on business needs</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Web support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Phone support</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">PostgreSQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Oracle</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Snowflake</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Amazon Redshift</p></li></ul><a id="final-verdict-on-sisense"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on Sisense</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">Sisense excels in providing a scalable business intelligence solution with deep integration for MS SQL Server. Its custom SQL support and flexible authentication options allow users to tailor their analysis while security features ensure data protection. However, the platform can have a steep learning curve, and complex configurations might require technical expertise.</p>
+<a id="4.-domo"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">4. Domo</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-9674image24.png" alt="Domo" />
+</figure>
+
+<p class="mt-3 text-xl leading-8"><a href="https://www.domo.com/appstore/connector/microsoft-sql-server-connector/overview" class="text-indigo-600">Domo</a> helps you connect, visualize, and analyze SQL Server data without requiring extensive technical expertise. The platform allows integration with SQL Server, enabling users to access and manipulate large datasets through easy-to-use dashboards. </p>
+
+<p class="mt-3 text-xl leading-8">Domo's data connector simplifies data extraction, transforming complex data into clear visual insights and empowering teams to make quick, data-driven decisions. With Domo, businesses can automate workflows and monitor performance across all functions through a single, unified interface.</p>
+<a id="features-of-domo"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of Domo</strong>
+</h3><a id="1.-real-time-dashboards"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Real-Time Dashboards</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-239113image9.png" alt="Real-Time Dashboards" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Domo offers dynamic dashboards that allow users to visualize their data in real time. These dashboards are easy to customize, helping businesses make quick, data-driven decisions.</p>
+<a id="2.-ai-analytics"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. AI Analytics</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-897216image14.png" alt="AI Analytics" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Domo’s AI-driven insights help users understand trends in their data without needing to manually sift through large datasets. The platform offers predictive analytics to forecast outcomes based on historical data.</p>
+<a id="3.-real-time-reporting-from-mssql-data-sources"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. Real-Time Reporting from MSSQL Data Sources</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Domo allows you to pull data directly from your Microsoft SQL Server, ensuring real-time reporting and eliminating delays in accessing the most up-to-date information.</p>
+
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-172230image6.png" alt="Real-Time Reporting from MSSQL Data Sources" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Domo provides mobile apps that allow users to access their dashboards and reports from anywhere. This makes it easier for teams to stay informed while on the go.</p>
+<a id="4.-always-stay-updated-with-fresh-data"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. Always Stay Updated with Fresh Data</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">With Domo’s automated data refreshes, you can be confident that your reports are always based on the freshest data available, reducing the need for manual updates.</p>
+<a id="domo-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Domo Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Free plan available for limited features</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Custom pricing for Pro and Enterprise plans</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Phone support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Web support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Live chat</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">PostgreSQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Oracle</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Google BigQuery</p></li></ul><a id="final-verdict-on-domo"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on Domo</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">Domo is another tool for businesses that need a user-friendly platform to manage SQL Server data. Its strong data visualization and automation capabilities simplify complex data analysis. However, Domo’s pricing can be steep for smaller companies, and some advanced features may require additional learning. Despite this, its accessibility and broad features make it a great choice for businesses looking to harness the power of their SQL Server data effectively.</p>
+<a id="5.-tableau"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">5. Tableau</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-65553image27.png" alt="Tableau" />
+</figure>
+
+<p class="mt-3 text-xl leading-8"><a href="https://www.tableau.com/solutions/sql-server" class="text-indigo-600">Tableau</a> is a widely used BI data visualization tool that seamlessly integrates with Microsoft SQL Server, enabling users to connect directly to large SQL databases for comprehensive analysis. Its powerful data visualization features allow both technical and non-technical users to explore and visualize data efficiently. Tableau's flexibility and scalability make it an ideal solution for organizations needing real-time insights from large datasets.</p>
+<a id="features-of-tableau"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of Tableau</strong>
+</h3><a id="1.-data-visualization"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Data Visualization</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-162477image23.png" alt="Data Visualization" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Tableau is renowned for its ability to create visually appealing dashboards. These dashboards allow users to explore data in real time and make informed decisions.</p>
+<a id="2.-natural-language-querying"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. Natural Language Querying</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-186664image17.png" alt="Natural Language Querying" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Tableau offers AI-powered natural language processing, enabling users to ask questions about their data and receive instant, visualized answers. This feature simplifies the data exploration process for non-technical users.</p>
+<a id="3.-platform-specific-queries"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. Platform-Specific Queries </strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Tableau supports platform-specific queries, optimizing performance by tailoring queries to the SQL Server environment for efficient data retrieval.</p>
+<a id="4.-in-memory-analytical-engine"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. In-Memory Analytical Engine </strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Tableau’s in-memory analytical engine allows for faster data analysis, enabling users to explore and manipulate large datasets without performance lags.</p>
+<a id="tableau-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Tableau Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Tableau Enterprise Creator: $115 /user/month</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Tableau Enterprise Explorer: $70/user/month</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Tableau Enterprise Viewer: $35/user/month</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Phone support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Online Documentation</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">PostgreSQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Oracle</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Google BigQuery</p></li></ul><a id="final-verdict-on-tableau"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on Tableau</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">Tableau is an excellent business intelligence tool for MS SQL Server, offering powerful data visualization and AI-driven insights. Its collaborative features and support for multiple data sources make it a top choice for teams looking to transform raw data into meaningful insights. However, it may require advanced knowledge to unlock its full potential, and its in-memory processing might use significant resources when dealing with extremely large datasets.</p>
+<a id="6.-holistics"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">6. Holistics</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-44778image12.png" alt="Holistics" />
+</figure>
+
+<p class="mt-3 text-xl leading-8"><a href="http://holistics.io" class="text-indigo-600">Holistics</a> is a modern data reporting and business intelligence platform that provides a user-friendly interface for MS SQL Server users. It integrates seamlessly with SQL databases, including Microsoft SQL Server, to help teams build models, reports, and dashboards using code. </p>
+
+<p class="mt-3 text-xl leading-8">Holistics emphasizes flexibility, allowing users to leverage analytics as code and enabling deeper data exploration.</p>
+<a id="features-of-holistics"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of Holistics</strong>
+</h3><a id="1.-data-reporting"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Data Reporting</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-54182image29.png" alt="Data Reporting" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Holistics enables users to generate complex reports from their data, simplifying the process of creating business insights from MS SQL Server data. Reports can be customized to meet the specific needs of the business.</p>
+<a id="2.-semantic-modeling-layer"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. Semantic Modeling Layer</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-107162image3.png" alt="Semantic Modeling Layer" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">The platform offers powerful data modeling tools, allowing users to define relationships and create unified data models for better analysis.</p>
+<a id="3.-embedded-analytics"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. Embedded Analytics</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-264084image10.png" alt="Embedded Analytics" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Holistics allows users to embed dashboards and reports into existing applications. This feature is useful for teams that need to integrate BI capabilities directly into their software.</p>
+<a id="4.-self-service-analytics"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. Self-Service Analytics</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Holistics empowers non-technical users with self-service analytics by allowing them to explore data and generate reports without relying on engineers or analysts.</p>
+<a id="5.-data-governance"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">5. Data Governance</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Holistics provides strong data governance features, ensuring that sensitive data is protected and that the right users have access to the right data.</p>
+<a id="holistics-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Holistics Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Entry: $150/month, 100 reports, 10 users</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Standard: $600/month, unlimited reports, 20 users</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Security Compliance Suite: $800/month, unlimited reports, 20 users</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Web support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Blog support</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">PostgreSQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Google BigQuery</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Snowflake</p></li></ul><a id="final-verdict-on-holistics"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on Holistics</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">Holistics is one of the best business intelligence tools that simplifies data reporting and modeling for MS SQL Server users. Its ability to handle analytics as code and create self-service solutions makes it a great choice for teams that value flexibility and control over their data. However, its coding-centric approach may require some technical expertise, which could be a barrier for non-technical teams.</p>
+<a id="7.-metabase"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">7. Metabase</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-15792image15.png" alt="Metabase" />
+</figure>
+
+<p class="mt-3 text-xl leading-8"><a href="https://www.metabase.com/" class="text-indigo-600">Metabase</a> is an open-source business intelligence tool designed for both technical and non-technical users. It connects to a wide range of databases, including Microsoft SQL Server, and offers an intuitive interface to query and visualize data. </p>
+
+<p class="mt-3 text-xl leading-8">Whether you're running ad-hoc queries or building dashboards, Metabase helps teams access and understand data easily.</p>
+<a id="features-of-metabase"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of Metabase</strong>
+</h3><a id="1.-simple-sql-querying"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Simple SQL Querying</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-63352image18.png" alt="Simple SQL Querying" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Metabase provides an intuitive SQL editor that allows users to run SQL queries directly on MS SQL Server data. It’s ideal for users who are comfortable writing SQL but want a user-friendly interface.</p>
+<a id="2.-data-dashboards"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. Data Dashboards</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-113401image1.png" alt="Data Dashboards" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Metabase makes it easy to create dashboards that visualize data in real time. These dashboards can be customized to meet the specific needs of business users and analysts.</p>
+<a id="3.-embedded-analytics"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. Embedded Analytics</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-283318image28.png" alt="Embedded Analytics" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">With Metabase, businesses can embed their dashboards and reports directly into their applications, making it easy to share insights with non-technical stakeholders.</p>
+<a id="4.-single-sign-on"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. Single Sign-On</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Metabase supports Single Sign-On (SSO) for access across teams, enhancing security and making user management easier.</p>
+<a id="5.-self-hosted-option"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">5. Self-Hosted Option</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">For businesses that require more control over their data, Metabase offers a self-hosted option, allowing companies to deploy the software on their own servers.</p>
+<a id="metabase-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Metabase Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Starter Plan: $85/month, includes 5 users, additional $5 per user/month</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Pro Plan: $500/month, includes 10 users, additional $10 per user/month</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Enterprise: Starts at $15,000/year (custom pricing)</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Knowledgebase</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Community forum</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">PostgreSQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Google BigQuery</p></li></ul><a id="final-verdict-on-metabase"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on Metabase</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">Metabase is a user-friendly and highly accessible BI tool that caters to both technical and non-technical users. Its visual query builder and ability to ask natural language questions make it simple for any team member to access valuable data. However, advanced users may find some limitations in its more complex analytical features.</p>
+<a id="8.-aqua-data-studio"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">8. Aqua Data Studio</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-14992image11.png" alt="Aqua Data Studio" />
+</figure>
+
+<p class="mt-3 text-xl leading-8"><a href="https://www.aquafold.com/aquadatastudio/" class="text-indigo-600">Aqua Data Studio</a> is an SQL development tool that offers a range of features to streamline database management, query building, and data visualization. Designed for database administrators, developers, and analysts, it supports various databases, including Microsoft SQL Server. </p>
+
+<p class="mt-3 text-xl leading-8">Aqua Data Studio combines an intuitive interface with advanced SQL querying capabilities, making it easier to manage and analyze large datasets.</p>
+<a id="features-of-aqua-data-studio"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of Aqua Data Studio</strong>
+</h3><a id="1.-database-querying"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Database Querying</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-465854image25.png" alt="Database Querying" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Aqua Data Studio provides an advanced SQL editor that allows users to query MS SQL Server data and other databases. The editor supports multiple SQL dialects, making it useful for teams that work with different database systems.</p>
+<a id="2.-visual-analytics"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. Visual Analytics</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-66633image30.png" alt="Visual Analytics" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">The tool includes powerful data visualization capabilities, allowing users to create custom dashboards and reports from their MS SQL Server data.</p>
+<a id="3.-data-modeling"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. Data Modeling</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-71233image20.png" alt="Data Modeling" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">Aqua Data Studio offers a comprehensive data modeling tool, enabling businesses to design and visualize their database structures for better analysis.</p>
+<a id="4.-sql-gui"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. SQL GUI</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">The tool’s SQL GUI simplifies database navigation, allowing users to explore and manipulate data without the need for deep SQL knowledge.</p>
+<a id="5.-er-diagrams"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">5. ER Diagrams</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Aqua Data Studio automatically generates Entity-Relationship (ER) diagrams to help visualize database structures, making it easier to understand relationships between tables and optimize database design.</p>
+<a id="aqua-data-studio-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Aqua Data Studio Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Free plan</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Standard: $499 per user (12-month license)</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Ultimate: $699 per user (12-month license)</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Documentation</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Customer Portal</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">PostgreSQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Oracle</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Google BigQuery</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Amazon Redshift</p></li></ul><a id="final-verdict-on-aqua-data-studio"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on Aqua Data Studio</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">Aqua Data Studio is a business intelligence tool that excels in querying and visualizing data from MS SQL Server and other databases. Its visual query builder and SQL GUI make it accessible to users of all skill levels, while the ER Diagram feature provides valuable insights into database structures. Although it offers querying tools, some advanced users may find the tool lacking in deeper data analytics capabilities.</p>
+<a id="9.-microstrategy"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">9. MicroStrategy</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-59655image7.png" alt="MicroStrategy" />
+</figure>
+
+<p class="mt-3 text-xl leading-8"><a href="https://www.microstrategy.com/why-microstrategy" class="text-indigo-600">MicroStrategy</a> offers enterprise-grade SQL Server BI solutions designed for large organizations. It integrates well with multiple databases, providing users with the flexibility to run custom SQL queries and manage their data with ease. </p>
+
+<p class="mt-3 text-xl leading-8">With its powerful features, MicroStrategy is ideal for users who want more control over their database queries while using advanced BI tools.</p>
+<a id="features-of-microstrategy"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of MicroStrategy</strong>
+</h3><a id="1.-enterprise-analytics"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Enterprise Analytics</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-654018image2.png" alt="Enterprise Analytics" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">MicroStrategy provides powerful analytics capabilities, allowing businesses to analyze large datasets from MS SQL Server and other databases. Its enterprise-grade features are designed to meet the needs of complex organizations.</p>
+<a id="2.-sql-query-syntax"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. SQL Query Syntax</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">MicroStrategy allows users to write and execute SQL queries directly, offering full flexibility for advanced data extraction and manipulation.</p>
+<a id="3.-freeform-sql-reports"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. Freeform SQL Reports</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">Users can create customized reports using freeform SQL queries, giving them the ability to pull specific data and create tailored analytics reports.</p>
+<a id="4.-freeform-sql-for-updates,-inserts,-and-other-database-maintenance-tasks"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. Freeform SQL for Updates, Inserts, and Other Database Maintenance Tasks</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">The platform supports freeform SQL for managing database updates, inserts, and other essential maintenance tasks, making it a versatile tool for both reporting and database management.</p>
+<a id="microstrategy-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">MicroStrategy Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Custom pricing based on business needs</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Phone support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Web support</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Oracle</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Google BigQuery</p></li></ul><a id="final-verdict-on-microstrategy"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on MicroStrategy</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">MicroStrategy is an advanced BI platform that integrates well with Microsoft SQL Server, enabling users to connect directly to large SQL databases for custom query management and detailed reporting. It offers powerful SQL functions for database professionals, allowing for deep customization of reports and analytics. While it excels in SQL capabilities, it may be complex for users seeking a more straightforward BI tool for MS SQL Server data analysis.</p>
+<a id="10.-thoughtspot"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">10. ThoughtSpot</strong>
+</h2><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-16690image26.png" alt="ThoughtSpot" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">To round off our list, <a href="https://www.thoughtspot.com/" class="text-indigo-600">ThoughtSpot</a> focuses on providing augmented analytics and easy-to-use visualization features while integrating with Microsoft SQL Server. It enables users to interact with their data seamlessly through natural language queries and AI-driven insights. </p>
+
+<p class="mt-3 text-xl leading-8">Designed for non-technical users, ThoughtSpot allows anyone to analyze and visualize data effortlessly, making it a powerful tool for companies looking to democratize data access across teams.</p>
+<a id="features-of-thoughtspot"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Features of ThoughtSpot</strong>
+</h3><a id="1.-search-based-analytics"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">1. Search-Based Analytics</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-134615image8.png" alt="Search-Based Analytics" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">ThoughtSpot allows users to search for data insights using natural language queries. This feature makes it easy for non-technical users to get answers from their data without needing SQL expertise.</p>
+<a id="2.-operationalize"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">2. Operationalize</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">The operationalize feature lets users integrate analytics into everyday workflows, ensuring that data-driven insights inform real-time decision-making in business processes.</p>
+<a id="3.-data-visualization"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">3. Data Visualization</strong>
+</h4><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<figure class="mt-8 mb-16">
+  <img class="bg-gray-50" src="../images/cms-431240image4.png" alt="Data Visualization" />
+</figure>
+
+<p class="mt-3 text-xl leading-8">ThoughtSpot provides dashboards that allow users to visualize their data and create reports. These customizable dashboards enable businesses to tailor their visualizations to their specific needs.</p>
+<a id="4.-auto-analyze"></a><h4
+  class="mt-10 text-2xl font-bold tracking-tight text-gray-900 sm:text-xl sm:text-xl"
+>
+  <strong class="font-semibold">4. Auto Analyze</strong>
+</h4>
+<p class="mt-3 text-xl leading-8">ThoughtSpot’s auto-analyze feature uses AI to scan data and generate actionable insights automatically, speeding up the process of understanding large datasets.</p>
+<a id="thoughtspot-pricing"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">ThoughtSpot Pricing</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Essentials: $1,250 per month (billed annually)</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Pro: Custom pricing (unlimited users)</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Enterprise: Custom pricing</p></li></ul><a id="customer-support"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Customer Support</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Email support</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Live chatbot</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Office support</p></li></ul><a id="other-supported-databases"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Other Supported Databases</strong>
+</h3><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">MySQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">PostgreSQL</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Google BigQuery</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8">Snowflake</p></li></ul><a id="final-verdict-on-thoughtspot"></a><h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  <strong class="font-semibold">Final Verdict on ThoughtSpot</strong>
+</h3>
+<p class="mt-3 text-xl leading-8">ThoughtSpot is a powerful BI tool that excels in AI-driven analytics and search-based insights. While it may not be as customizable for power users, its ease of use and rapid data visualization make it an excellent choice for businesses looking to empower teams with data-driven decision-making.</p>
+<a id="conclusion"></a><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  <strong class="font-semibold">Conclusion</strong>
+</h2>
+<p class="mt-3 text-xl leading-8">Each of these tools offers its own set of features and benefits, making them ideal for different types of businesses.</p>
+
+<p class="mt-3 text-xl leading-8">However, when it comes to simplicity, minimal learning curve, and AI-powered insights, BlazeSQL stands out. It offers an AI analytics assistant that simplifies SQL querying and report generation, making it perfect for technical and non-technical users. </p>
+
+<p class="mt-3 text-xl leading-8">With BlazeSQL, you don’t have to be a data expert to get the most out of your business intelligence tools. Try BlazeSQL today and experience its ease and efficiency in your data analysis and reporting.</p>
+
+
+                      </div>
+                  </div>
+                </div>
+          </div>
+
+      <footer class="bg-dark-bg">
+      <div
+        class="md:border-b border-spacing-0.5 border-[#ffffff1f] pt-16 pb-0 md:py-10"
+      >
+        <div class="container-center">
+          <div class="flex items-center justify-between w-full">
+            <div class="flex items-center gap-2 lg:gap-3">
+              <img
+                src="../images/blazeql-white.svg"
+                alt="blazesql"
+                loading="lazy"
+              />
+              <p class="text-xl -tracking-0.4 text-white font-semibold">
+                BlazeSQL
+              </p>
+            </div>
+
+            <div class="items-center justify-end hidden w-full gap-3 md:flex">
+              <a
+                href="#"
+                class="book_demo text-white btn-main btn-secondary btn-md border-white-12 hover:border-white-40"
+              >
+                Book a demo
+              </a>
+              <a href="#" class="text-white btn-main btn-primary btn-md">
+                Get started
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full pt-16 pb-16 md:pb-40 md:pt-20">
+        <div class="container-center">
+          <div
+            class="grid grid-cols-2 gap-y-16 md:gap-y-10 gap-x-10 md:gap-x-5 lg:gap-x-10 md:grid-cols-3"
+          >
+            <!-- Item -->
+            <div>
+              <p class="mb-6 md:mb-4 overline-text text-white/55">
+                Information
+              </p>
+              <ul class="flex flex-col gap-6 md:gap-4">
+                <li>
+                  <a href="#" class="footer-link">Pricing - Teams</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Pricing - Individual</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Data Privacy</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Item -->
+            <div>
+              <p class="mb-6 md:mb-4 overline-text text-white/55">Blog</p>
+              <ul class="flex flex-col gap-6 md:gap-4">
+                <li>
+                  <a href="#" class="footer-link"
+                    >Connect ChatGPT to Snowflake</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="footer-link">SQL Data Visualization</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link"
+                    >No code business intelligence</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Item -->
+            <div class="col-span-2 md:col-auto">
+              <p class="mb-6 md:mb-4 overline-text text-white/55">Product</p>
+              <ul class="flex flex-col gap-6 md:gap-4">
+                <li>
+                  <a href="#" class="footer-link"
+                    >AI-Powered No code Dashboard Builder</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block pb-16 md:hidden">
+        <div class="container-center">
+          <div class="grid w-full grid-cols-2 gap-3">
+            <button
+              type="button"
+              class="book_demo w-full text-white btn-main btn-secondary btn-md border-white-12 hover:border-white-40"
+            >
+              Book a demo
+            </button>
+            <button
+              type="button"
+              class="w-full text-white btn-main btn-primary btn-md"
+            >
+              Get started
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-spacing-0.5 border-[#ffffff1f] py-10 md:py-6">
+        <div class="container-center">
+          <p class="text-[#ffffff8f]">
+            © <span class="current-year">2024</span> BlazeSQL, Inc. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../store_gclid.js"></script>
+    <script src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
+    <script>
+      const videos = document.querySelectorAll("video[data-autoplay]");
+
+      videos.forEach((video) => {
+        if (video.isIntersecting) {
+          video.play();
+        }
+      });
+
+      let observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.play();
+            } else {
+              entry.target.pause();
+            }
+          });
+        },
+        {
+          /* options */
+        }
+      );
+
+      videos.forEach((video) => observer.observe(video));
+    </script>
+  </body>
+</html>

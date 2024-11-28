@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+    // This only applies to users who have an app in the account, in which case they agreed to the privacy terms which
+    // override the cookiebot preferences. This is required to successfully activate a subscription for a BlazeSQL account
+      document.addEventListener('DOMContentLoaded', () => {
+      const userId = new URLSearchParams(window.location.search).get('userId');
+      const freeTrial = new URLSearchParams(window.location.search).get('freeTrial');
+      const navbar = document.querySelector('header');
+
+      if(userId){
+        navbar.style.display="none"
+      }else{
+         navbar.style.display="block"
+      }
+   
+      
+
+      const independentPlanLink = document.getElementById('independentPlanLink');
+      const allInclusivePlanLink = document.getElementById('allInclusivePlanLink');
+      if (freeTrial == 'false'){
+        independentPlanLink.textContent = "Subscribe";
+      }
+      if (independentPlanLink) independentPlanLink.href += '?freeTrial=' + encodeURIComponent(freeTrial);
+      if (allInclusivePlanLink) allInclusivePlanLink.href += '&freeTrial=' + encodeURIComponent(freeTrial);
+
+
+      if (userId) {
+        if (independentPlanLink) independentPlanLink.href += '&userId=' + encodeURIComponent(userId);
+        if (allInclusivePlanLink) allInclusivePlanLink.href += '&userId=' + encodeURIComponent(userId);
+      } else {
+        if (independentPlanLink) independentPlanLink.href += '&userId=ignorethis';
+        if (allInclusivePlanLink) allInclusivePlanLink.href += '&userId=ignorethis';
+      }
+
+    });
+    </script>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e4774817-fdf9-4bf4-a036-7baae3f41bd2" data-blockingmode="auto" type="text/javascript"></script>
+    <!-- Google tag (gtag.js) -->
+    <script src="gtm.js"></script>
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a">
+    <meta property="og:image:secure_url" content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1440">
+    <meta property="og:image:height" content="1024">
+    <meta charset="UTF-8" />
+    <link rel="alternate" href="https://www.blazesql.com/team-pricing.html" hreflang="en" />
+    <link href="output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blaze subscription."/>
+    <link rel="shortcut icon" href="images/favicon1-32x32.png" type="image/png">
+    <link rel="icon" href="images/favicon1.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.blazesql.com/team-pricing" />
+    <title>Blaze SQL</title>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="a8064184-a727-4738-910c-a4b4a52b02eb";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "iilxk31jtt");
+  </script>
+  </head>
+  <body>
+         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVXJLN6K"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- Header -->
+    <header class="sticky top-0 z-50 py-3 bg-white md:py-6 md:border-b border-black-8">
+        <div class="container-center">
+            <nav class="relative z-0 flex items-center justify-between">
+                <!-- Logo -->
+                <a href="/" class="flex items-center gap-2 lg:gap-3 hover-opacity">
+                    <img src="images/blazesql.svg" alt="BlazeSQL logo">
+                    <p class="text-xl -tracking-0.4 text-brand-default font-semibold">BlazeSQL</p>
+                </a>
+
+                <!-- nav menu -->
+                <ul class="items-center hidden md:gap-5 lg:gap-10 md:flex">
+                    <li>
+                        <a href="https://www.blazesql.com/privacy"
+                            class="font-medium capitalize label-s animate hover:text-brand-default text-black-100">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="https://www.blazesql.com/white-label-embedding"
+                            class="font-medium capitalize label-s animate hover:text-brand-default text-black-100">White-label
+                            &
+                            embed</a>
+                    </li>
+                    <li class="relative z-0 navbar-dropdown group">
+                        <a href="#"
+                            class="flex items-center font-medium capitalize label-s animate hover:text-brand-default text-black-100 group">
+                            Pricing
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                class="group-hover:rotate-180 animate" fill="none">
+                                <path d="M17 10H7L12 16L17 10Z" fill="currentcolor" />
+                            </svg>
+                        </a>
+                        <!-- dropdown -->
+                        <div class="absolute hidden w-40 pt-2 -translate-x-1/2 left-1/2 top-full group-hover:block">
+                            <div
+                                class="p-1 bg-white border rounded-lg border-black-12 shadow-nav-dropdown backdrop-blur-32">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.blazesql.com/team-pricing"
+                                            class="flex items-center gap-2 text-black-100 text-sm animate font-medium -tracking-0.14 hover:bg-brand-dark-12 p-3 rounded hover:text-brand-dark">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.99292 11.6719C10.0671 11.6719 12.6946 12.1377 12.6946 13.9985C12.6946 15.8594 10.0846 16.3385 6.99292 16.3385C3.91792 16.3385 1.29125 15.8769 1.29125 14.0152C1.29125 12.1535 3.90042 11.6719 6.99292 11.6719Z"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.99292 9.01634C4.97459 9.01634 3.33792 7.38051 3.33792 5.36217C3.33792 3.34384 4.97459 1.70801 6.99292 1.70801C9.01042 1.70801 10.6471 3.34384 10.6471 5.36217C10.6546 7.37301 9.02959 9.00884 7.01875 9.01634H6.99292Z"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M12.7359 8.06741C14.0701 7.87991 15.0976 6.73491 15.1001 5.34908C15.1001 3.98324 14.1042 2.84991 12.7984 2.63574"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M14.4962 11.2764C15.7887 11.4689 16.6912 11.9222 16.6912 12.8555C16.6912 13.498 16.2662 13.9147 15.5795 14.1755"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            For teams
+                                        </a>
+                                        <a href="https://www.blazesql.com/blaze-pricing"
+                                            class="flex items-center gap-2 text-black-100 text-sm animate font-medium -tracking-0.14 hover:bg-brand-dark-12 p-3 rounded hover:text-brand-dark">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18"
+                                                viewBox="0 0 14 18" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.9873 11.7891C3.76428 11.7891 1.0119 12.2764 1.0119 14.228C1.0119 16.1795 3.74682 16.6843 6.9873 16.6843C10.2103 16.6843 12.9619 16.1962 12.9619 14.2454C12.9619 12.2946 10.2278 11.7891 6.9873 11.7891Z"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.9873 9.00523C9.10238 9.00523 10.8167 7.29015 10.8167 5.17507C10.8167 3.05999 9.10238 1.3457 6.9873 1.3457C4.87222 1.3457 3.15714 3.05999 3.15714 5.17507C3.15 7.283 4.85317 8.99808 6.96032 9.00523H6.9873Z"
+                                                    stroke="currentcolor" stroke-width="1.42857" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            For individuals
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Book demo/ Get started -->
+                <div class="items-center hidden gap-4 md:flex">
+                    <a href="https://www.blazesql.com/demo-request"><button type="button"
+                            class="border-transparent btn-main btn-secondary">Book a demo</button></a>
+                    <a href="https://www.blazesql.com/app"><button type="button" class="btn-main btn-primary">Get
+                            started</button></a>
+                </div>
+
+                <!-- toggler -->
+                <button type="button" class="block hover-opacity md:hidden open-navbar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2 8H22M22 16H2" stroke="#0F0F10" stroke-width="1.5" />
+                    </svg>
+                </button>
+
+                <!-- Navbar mobile -->
+                <div
+                    class="fixed top-0 left-0 flex flex-col items-center justify-between w-full h-full bg-white navbar-mobile">
+                    <div class="flex items-center justify-between w-full px-4 py-3">
+                        <!-- Logo -->
+                        <a href="/" class="flex items-center gap-2 lg:gap-3 hover-opacity">
+                            <img src="images/blazesql.svg" alt="blazesql">
+                            <p class="text-xl -tracking-0.4 text-brand-default font-semibold">BlazeSQL</p>
+                        </a>
+                        <!-- toggler -->
+                        <button type="button" class="block hover-opacity close-navbar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M5 5L19 19M19 5L5 19" stroke="#0F0F10" stroke-width="1.5" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col items-start justify-center flex-1 w-full gap-10 px-4">
+                        <li>
+                            <a href="https://www.blazesql.com/privacy"
+                                class="capitalize label-l animate hover:text-brand-default">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="https://www.blazesql.com/white-label-embedding"
+                                class="capitalize label-l animate hover:text-brand-default">White-label &
+                                embed</a>
+                        </li>
+                        <li>
+                            <a href="https://www.blazesql.com/team-pricing"
+                                class="capitalize label-l animate hover:text-brand-default">Pricing for
+                                teams</a>
+                        </li>
+                        <li>
+                            <a href="https://www.blazesql.com/blaze-pricing"
+                                class="capitalize label-l animate hover:text-brand-default">Pricing for
+                                individuals</a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-between w-full gap-3 px-4 py-10 border-t border-black-12">
+                        <a href="https://www.blazesql.com/app"><button type="button"
+                                class="w-full btn-main btn-primary">Get started</button></a>
+                        <a href="https://www.blazesql.com/demo-request"><button type="button"
+                                class="w-full btn-main btn-secondary">Book a demo</button></a>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <!-- END header -->
+  <div class="bg-white px-6 py-16 sm:py-16 lg:px-8">
+    <div class="mx-auto max-w-4xl text-center">
+      <p class="text-base font-semibold leading-7 text-indigo-600">AI for your team</p>
+      <h2 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Your new AI Data Analyst</h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600">Join the fast growing community of teams eliminating their data bottlenecks with AI.</p>
+    </div>
+  </div>
+<div class="mx-auto max-w-7xl md:px-0 px-4">
+<div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 pb-5">
+      <div class="rounded-3xl p-8 ring-1 xl:p-10 ring-gray-200">
+        <h3 id="tier-freelancer" class="text-lg font-semibold leading-8 text-gray-900">Blaze Team</h3>
+        <p class="mt-4 text-sm leading-6 text-gray-600">Standard plan for teams.</p>
+        <p class="mt-6 flex items-baseline gap-x-1">
+          <!-- Price, update based on frequency toggle state -->
+          <span class="text-4xl font-bold tracking-tight text-gray-900">$149</span>
+          <!-- Payment frequency, update based on frequency toggle state -->
+          <span class="text-sm font-semibold leading-6 text-gray-600">/month<br>(incl. 3 users, $49 per extra user)</span>
+        </p>
+        <a id="independentPlanLink" href="https://us-central1-querycomposer.cloudfunctions.net/team-check" aria-describedby="tier-freelancer" class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-600 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-indigo-600">Start free 14-day trial</a>
+        <a id="independentPlanLink" href="https://www.blazesql.com/contact.html" aria-describedby="tier-freelancer" class="mt-2 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 border border-indigo-600 text-indigo-600 shadow-sm hover:bg-indigo-100 ">Get a demo</a>
+        <ul role="list" class="mt-8 space-y-3 text-sm leading-6 xl:mt-10 text-gray-600">
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            AI Data Analyst
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Desktop version for private database connections
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Dashboards
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Shared team environments
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Unlimited requests
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-3xl p-8 ring-1 xl:p-10 ring-gray-200">
+        <h3 id="tier-startup" class="text-lg font-semibold leading-8 text-gray-900">Blaze Team Advanced</h3>
+        <p class="mt-4 text-sm leading-6 text-gray-600">Enhanced plan for teams.</p>
+        <p class="mt-6 flex items-baseline gap-x-1">
+          <!-- Price, update based on frequency toggle state -->
+          <span class="text-4xl font-bold tracking-tight text-gray-900">$499</span>
+          <!-- Payment frequency, update based on frequency toggle state -->
+          <span class="text-sm font-semibold leading-6 text-gray-600">/month<br>(incl. 3 users, $75 per extra user)</span>
+        </p>
+        <a id="allInclusivePlanLink" href="https://us-central1-querycomposer.cloudfunctions.net/team-check?advanced=True" aria-describedby="tier-startup" class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-600 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-indigo-600">Subscribe</a>
+        <a id="independentPlanLink" href="https://www.blazesql.com/contact.html" aria-describedby="tier-freelancer" class="mt-2 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 border border-indigo-600 text-indigo-600 shadow-sm hover:bg-indigo-100 ">Get a demo</a>
+        <ul role="list" class="mt-8 space-y-3 text-sm leading-6 xl:mt-10 text-gray-600">
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            All Blaze Team Features
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Advanced Analytics AI (can run python)
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            AI generated reporting emails
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Priority support
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Continuously upgraded to the latest, most capable AI Model in the world.
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-3xl p-8 ring-1 xl:p-10 bg-gray-900 ring-gray-900">
+        <h3 id="tier-enterprise" class="text-lg font-semibold leading-8 text-white">Blaze Enterprise</h3>
+        <p class="mt-4 text-sm leading-6 text-gray-300">Dedicated support and infrastructure for your company.</p>
+        <p class="mt-6 flex items-baseline gap-x-1">
+          <span class="text-4xl font-bold tracking-tight text-white">Custom</span>
+        </p>
+        <a href="contact.html" aria-describedby="tier-enterprise" class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white">Let's talk</a>
+        <ul role="list" class="mt-8 space-y-3 text-sm leading-6 xl:mt-10 text-gray-300">
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            SSO Login (SAML or OpenID Connect)
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Privately hosted app (https://blazesql.yourcompany.com)
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Private Google Cloud Environment
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Dedicated support
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            White labeling & re-branding
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Customizations
+          </li>
+        </ul>
+      </div>
+    </div>
+
+<div class="relative isolate bg-white pb-32 pt-24 sm:pt-32">
+
+  <div class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl" aria-hidden="true">
+
+    <div class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
+  <div class="absolute inset-x-0 top-0 -z-10 flex transform-gpu overflow-hidden pt-32 opacity-25 blur-3xl sm:pt-40 xl:justify-end" aria-hidden="true">
+    <div class="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:ml-0 xl:mr-[calc(50%-12rem)]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
+
+</div>
+</div>
+        <!-- Testimonials -->
+        <section class="pt-16 border-t bg-dark-bg md:pt-28 border-white-12">
+            <h2 class="max-w-2xl px-5 mx-auto text-center text-white h1">
+                Over 120k insights generated
+            </h2>
+            <div class="container-center">
+                <div class="mt-10 -mb-72 md:mt-20 swiper insights md:-mb-96 xl-desktops:-mb-72">
+                    <!-- swiper wrapper -->
+                    <div class="!h-auto mb-16 md:mb-20 swiper-wrapper">
+                        <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/bradyscaspar"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        Blaze saves our team hours of manual work each week by automating the process of
+                                        writing
+                                        the queries we use to analyze
+                                        our business. It unlocks a new level of analysis, filling in our SQL knowledge
+                                        gaps
+                                        and
+                                        writing complex queries that
+                                        enable us to dig deeper into our data than ever before.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Brady-Caspar.png" alt="hoo.be CTO uses BlazeSQL"
+                                            class="insight-footer-img">
+                                        <a href="https://hoo.be/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/hoobe-logo.png" alt="hoobe uses BlazeSQL"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Brady Caspar</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">CTO // hoo.be</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/thibautnguyen/"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        Sometimes all you want is a quick answer from your data that is not so obvious
+                                        to
+                                        query
+                                        or you need a starting point for
+                                        a deeper BI analysis. That is to me the gap filled by BlazeSQL and it saves our
+                                        team
+                                        quite some time.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Thibaut-Nguyen.png" alt="Thibaut Nguyen"
+                                            class="insight-footer-img">
+                                        <a href="https://poppy.be/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/Poppy-Mobility.png" alt="Poppy Mobility"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Thibaut Nguyen</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">CTO // Poppy Mobility</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/sej-sander-thorsen-0367b337/"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        With BlazeSQL, we have gotten a fast-track to data-driven insights. Blaze enables us to better understand our customers and make data driven decisions. We can quickly test a hypothesis, without involving engineering.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Sej-Sander.png" alt="Sej Sander Thorsen"
+                                            class="insight-footer-img">
+                                        <a href="https://klarpris.dk/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/Klarpris.png" alt="Klarpris"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Sej Sander Thorsen</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">Chief Product Officer // Klarpris</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/bradyscaspar"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        Blaze saves our team hours of manual work each week by automating the process of
+                                        writing
+                                        the queries we use to analyze
+                                        our business. It unlocks a new level of analysis, filling in our SQL knowledge
+                                        gaps
+                                        and
+                                        writing complex queries that
+                                        enable us to dig deeper into our data than ever before.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Brady-Caspar.png" alt="hoo.be CTO uses BlazeSQL"
+                                            class="insight-footer-img">
+                                        <a href="https://hoo.be/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/hoobe-logo.png" alt="hoobe uses BlazeSQL"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Brady Caspar</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">CTO // hoo.be</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/thibautnguyen/"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        Sometimes all you want is a quick answer from your data that is not so obvious
+                                        to
+                                        query
+                                        or you need a starting point for
+                                        a deeper BI analysis. That is to me the gap filled by BlazeSQL and it saves our
+                                        team
+                                        quite some time.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Thibaut-Nguyen.png" alt="Thibaut Nguyen"
+                                            class="insight-footer-img">
+                                        <a href="https://poppy.be/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/Poppy-Mobility.png" alt="Poppy Mobility"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Thibaut Nguyen</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">CTO // Poppy Mobility</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/sej-sander-thorsen-0367b337/"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        With BlazeSQL, we have gotten a fast-track to data-driven insights. Blaze enables us to better understand our customers and make data driven decisions. We can quickly test a hypothesis, without involving engineering.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Sej-Sander.png" alt="Sej Sander Thorsen"
+                                            class="insight-footer-img">
+                                        <a href="https://klarpris.dk/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/Klarpris.png" alt="Klarpris"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Sej Sander Thorsen</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">Chief Product Officer // Klarpris</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END testimonials -->
+
+        <!-- FAQ -->
+        <section class="w-full bg-dark-bg">
+            <div class="pb-16 pt-52 bg-light-bg faq-bg md:pb-120 md:pt-72 lg:pt-96">
+                <!-- Viktoria Seeman -->
+                <div class="py-32 mx-2 md:py-40 md:px-0">
+                    <div class="text-center">
+                        <p class="overline-text text-brand-dark">Thousands of people are outperforming their peers
+                            with
+                            Blaze</p>
+                        <h2 class="mt-6 md:mt-10">
+                            Ex. Viktoria Seeman, Amazon
+                        </h2>
+                    </div>
+                    <div
+                        class="mx-auto overflow-hidden bg-white border-0.5 rounded-2xl shadow-insight-card backdrop-blur-120 border-black/40 max-w-[630px] mt-20 flex flex-col">
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/CsFzGi8grRg/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            data-instgrm-version="14">
+                            <div style="padding:16px;"> <a
+                                    href="https://www.instagram.com/reel/CsFzGi8grRg/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                                    target="_blank">
+                                    <div style=" display: flex; flex-direction: row; align-items: center;">
+                                        <div
+                                            style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                        </div>
+                                        <div
+                                            style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 19% 0;"></div>
+                                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                        <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                            xmlns="https://www.w3.org/2000/svg"
+                                            xmlns:xlink="https://www.w3.org/1999/xlink">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                                    <g>
+                                                        <path
+                                                            d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div style="padding-top: 8px;">
+                                        <div
+                                            style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                            View this post on Instagram</div>
+                                    </div>
+                                    <div style="padding: 12.5% 0;"></div>
+                                    <div
+                                        style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                        <div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: 8px;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: auto;">
+                                            <div
+                                                style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                                        </div>
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                                        </div>
+                                    </div>
+                                </a>
+                                <p
+                                    style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                    <a href="https://www.instagram.com/reel/CsFzGi8grRg/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                        style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                        target="_blank">A post shared by Viktoria Semaan (@viktoria.semaan)</a>
+                                </p>
+                            </div>
+                        </blockquote>
+                        <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+                <!-- END Viktoria Seeman -->
+            </div>
+        </section>
+        <!-- END faq -->
+
+    <!-- script -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

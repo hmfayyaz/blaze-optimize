@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e4774817-fdf9-4bf4-a036-7baae3f41bd2"
+    data-blockingmode="auto" type="text/javascript"></script>
+  <script src="../gtm.js"></script>
+  <meta property="og:image"
+    content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a" />
+  <meta property="og:image:secure_url"
+    content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1440" />
+  <meta property="og:image:height" content="1024" />
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Integrate ChatGPT with SQL Server to automate query generation, code reviews, and data transformation. Learn best practices for accuracy, security, and performance." />
+  <!-- Google tag (gtag.js) -->
+  <link href="../output.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="../images/favicon1-32x32.png" type="image/png" />
+  <link rel="icon" href="../images/favicon1.ico" type="image/x-icon" />
+
+  <title>Our  using ChatGPT with SQL Server</title>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] =
+        c[a] ||
+        function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "iilxk31jtt");
+  </script>
+</head>
+
+<body>
+  <div class="px-6 bg-white lg:px-8">
+    <div class="relative overflow-hidden bg-white isolate">
+      <svg
+        class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        aria-hidden="true">
+        <defs>
+          <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1"
+            patternUnits="userSpaceOnUse">
+            <path d="M.5 200V.5H200" fill="none" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
+      </svg>
+      <div class="max-w-3xl mx-auto text-base leading-7 text-gray-700">
+        <header>
+          <nav class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-0" aria-label="Global">
+            <a href="https://www.blazesql.com" class="flex items-center">
+              <img class="w-auto h-8 pr-2" src="../images/blue_flame.png" alt="" />
+              <span>BlazeSQL</span>
+            </a>
+
+            <div class="hidden lg:flex lg:gap-x-12">
+              <a href="https://www.blazesql.com/privacy.html"
+                class="text-sm font-semibold leading-6 text-gray-900">Privacy Policy</a>
+              <a href="https://www.blazesql.com/terms.html" class="text-sm font-semibold leading-6 text-gray-900">Terms
+                of Service</a>
+              <a href="https://www.blazesql.com/app" class="text-sm font-semibold leading-6 text-gray-900">Open App<span
+                  aria-hidden="true">&rarr;</span></a>
+            </div>
+          </nav>
+        </header>
+      </div>
+      <div class="px-6 py-16 lg:px-8">
+        <div class="max-w-3xl mx-auto text-base leading-7 text-gray-700">
+          <h1
+  class="mt-16 mb-4 text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+>
+  Best practices when using ChatGPT with SQL Server
+</h1>
+<p class="mt-3 text-xl leading-8">Integrating ChatGPT with SQL Server can significantly enhance your database management by automating SQL query generation, assisting in code reviews, and transforming data. However, using it effectively requires understanding best practices to ensure accuracy, security, and optimal performance. This guide covers critical use cases and tips for a mindful implementation of ChatGPT in SQL Server.</p>
+<h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  Use Cases for ChatGPT and Microsoft SQL Server
+</h2><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Query Suggestions</strong>: Automating SQL query generation. ChatGPT can help you quickly write complex queries based on your specific requirements, saving time and reducing the chance of errors, especially when working with large or unfamiliar databases.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Code Review</strong>: Identifying performance and security risks. ChatGPT can review existing SQL queries and suggest optimizations, such as indexing, reducing nested subqueries, or spotting potential SQL injection vulnerabilities, helping you maintain efficient and secure code.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Data Cleaning</strong>: Formatting and transforming data. ChatGPT can assist in creating SQL scripts to clean up data, such as removing duplicates, formatting dates, or standardising text entries, streamlining the data preparation process for analysis. </p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Report Generation</strong>: Writing queries for custom reports. By providing ChatGPT with the table schema and report requirements, you can quickly generate queries to extract the necessary data for dashboards, summaries, or detailed reports. </p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Learning and Troubleshooting</strong>: Explaining SQL concepts or debugging errors. ChatGPT can help clarify SQL functions, syntax, and error messages, making it a valuable resource for both beginners learning SQL and experienced users troubleshooting complex issues.</p></li></ul><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  Best Practices for using ChatGPT with SQL Server
+</h2><ul class="list-disc list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Verify Output</strong>: Always double-check AI-generated queries before running them. While ChatGPT can be highly accurate, reviewing the queries for correctness is important, especially when dealing with complex logic or large datasets.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Limit Sensitive Data</strong>: When sharing table schemas or prompts with ChatGPT, be mindful of data privacy. To maintain data security, avoid including sensitive personal data, passwords, or confidential business details.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Performance Monitoring</strong>: Use ChatGPT for non-critical operations or as a starting point for query generation. After obtaining the query, test its performance on a smaller subset of data before applying it to production environments to ensure it runs efficiently.</p></li></ul><h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  How to generate SQL Server queries with ChatGPT
+</h2>
+<p class="mt-3 text-xl leading-8">You need ChatGPT to help answer data questions for your SQL Server database. To do this, you must provide ChatGPT with the schema of your table so it understands your data's structure. Let’s break down how to do this, using **example data** throughout the process.</p>
+<ol class="list-decimal list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Open SQL Server Management Studio (SSMS)</strong>: Launch SSMS and connect to your SQL Server instance. Find the database containing the tables you want ChatGPT to work with. For this example, we’ll use a single table named <em>Employees</em>.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Extract the Table Schema</strong>:  In the Object Explorer, right-click the <em>Employees</em> table and select <strong class="font-semibold">"Script Table as" > "CREATE To" > "New Query Editor Window." Example Data</strong>: This will generate the following table's structure:</p></li></ol>
+<p class="mt-3 text-xl leading-8">     CREATE TABLE Employees (</p>
+
+<p class="mt-3 text-xl leading-8">         EmployeeID INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">         FirstName NVARCHAR(50),</p>
+
+<p class="mt-3 text-xl leading-8">         LastName NVARCHAR(50),</p>
+
+<p class="mt-3 text-xl leading-8">         Department NVARCHAR(100),</p>
+
+<p class="mt-3 text-xl leading-8">         HireDate DATE,</p>
+
+<p class="mt-3 text-xl leading-8">         Salary DECIMAL(18, 2)</p>
+
+<p class="mt-3 text-xl leading-8">     );</p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Note</strong>: This example schema lists columns and data types, which are crucial for ChatGPT to provide correct query responses.</p>
+
+<p class="mt-3 text-xl leading-8">3. <strong class="font-semibold">Copy the Schema</strong>: Highlight the script text you see in the editor and <strong class="font-semibold">copy it</strong> to your clipboard. The <strong class="font-semibold">example schema</strong> you've copied contains essential details about how your table is set up.</p>
+
+<p class="mt-3 text-xl leading-8">4. <strong class="font-semibold">Prepare Your ChatGPT Prompt</strong>:  Open ChatGPT and paste the <strong class="font-semibold">example schema</strong> you copied. Now, add a specific data-related question. For example:</p>
+
+<p class="mt-3 text-xl leading-8">     I am using SQL Server 2019. Here is my table schema:</p>
+<p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<p class="mt-3 text-xl leading-8">     CREATE TABLE Employees (</p>
+
+<p class="mt-3 text-xl leading-8">         EmployeeID INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">         FirstName NVARCHAR(50),</p>
+
+<p class="mt-3 text-xl leading-8">         LastName NVARCHAR(50),</p>
+
+<p class="mt-3 text-xl leading-8">         Department NVARCHAR(100),</p>
+
+<p class="mt-3 text-xl leading-8">         HireDate DATE,</p>
+
+<p class="mt-3 text-xl leading-8">         Salary DECIMAL(18, 2)</p>
+
+<p class="mt-3 text-xl leading-8">     );</p>
+
+<p class="mt-3 text-xl leading-8">Can you write a SQL query to find all employees in the 'Marketing' </p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Example Data</strong>: The prompt above includes the schema details and specifies a clear question to guide ChatGPT in generating the correct SQL query.</p>
+
+<p class="mt-3 text-xl leading-8">5. <strong class="font-semibold">Submit and Review</strong>: Send this prompt to ChatGPT. It will use your <strong class="font-semibold">example schema</strong> to generate a SQL query tailored to the table’s structure.</p>
+<h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Why does this produce the best results?
+</h3>
+<p class="mt-3 text-xl leading-8">This approach produces the best results because it gives ChatGPT the full context of your database. Sharing the table schema tells ChatGPT exactly what columns exist, their data types, and how they're structured. With this information, ChatGPT can generate precise queries that match your data, reducing the chances of errors or misinterpretations.</p>
+
+<p class="mt-3 text-xl leading-8">Additionally, as a bonus, including the SQL Server version (such as SQL Server 2012, 2016, 2017, 2019, or 2022) also helps fine-tune the query. Different versions have unique features and syntax, so specifying the version ensures ChatGPT uses the correct commands and functions for your setup. Together, these details allow ChatGPT to create the most accurate queries possible.</p>
+
+
+        </div>
+      </div>
+    </div>
+    <script src="../store_gclid.js"></script>
+    <script src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
+    <script>
+      const videos = document.querySelectorAll("video[data-autoplay]");
+
+      videos.forEach((video) => {
+        if (video.isIntersecting) {
+          video.play();
+        }
+      });
+
+      let observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.play();
+            } else {
+              entry.target.pause();
+            }
+          });
+        },
+        {
+          /* options */
+        }
+      );
+
+      videos.forEach((video) => observer.observe(video));
+    </script>
+</body>
+
+</html>

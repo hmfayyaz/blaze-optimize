@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e4774817-fdf9-4bf4-a036-7baae3f41bd2"
+        data-blockingmode="auto" type="text/javascript"></script>
+    <!-- Google tag (gtag.js) -->
+    <script src="gtm.js"></script>
+    <meta property="og:image"
+        content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a">
+    <meta property="og:image:secure_url"
+        content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1440">
+    <meta property="og:image:height" content="1024">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This AI Data Analytics chatbot generates SQL queries with AI, like ChatGPT for your SQL Database. Connect it to your SQL database for cutting edge AI Data Analysis, and let it work for you." />
+    <title>Blaze SQL AI: your AI Data Analytics chatbot, and AI SQL generator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" href="images/favicon1.ico" type="image/x-icon">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="alternate" href="https://www.blazesql.com" hreflang="en" />
+    <link rel="canonical" href="https://www.blazesql.com/" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "iilxk31jtt");
+    </script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="preload" href="images/1img (hero).png" as="image" />
+    <link rel="preload" href="images/1img-hero-mobile.png" as="image" />
+    <link rel="preload" href="fonts/Geist-Medium.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Geist-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Geist-Regular.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVXJLN6K" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 py-3 bg-white md:py-6 md:border-b border-black-8">
+        <div class="container-center">
+            <nav class="relative z-0 flex items-center justify-between">
+                <!-- Logo -->
+                <a href="/" class="flex items-center gap-2 lg:gap-3 hover-opacity">
+                    <img src="images/blazesql.svg" alt="BlazeSQL logo">
+                    <p class="text-xl -tracking-0.4 text-brand-default font-semibold">BlazeSQL</p>
+                </a>
+
+                <!-- nav menu -->
+                <ul class="items-center hidden md:gap-5 lg:gap-10 md:flex">
+                    <li>
+                        <a href="https://www.blazesql.com/privacy"
+                            class="font-medium capitalize label-s animate hover:text-brand-default text-black-100">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="https://www.blazesql.com/white-label-embedding"
+                            class="font-medium capitalize label-s animate hover:text-brand-default text-black-100">White-label
+                            &
+                            embed</a>
+                    </li>
+                    <li class="relative z-0 navbar-dropdown group">
+                        <a href="#"
+                            class="flex items-center font-medium capitalize label-s animate hover:text-brand-default text-black-100 group">
+                            Pricing
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                class="group-hover:rotate-180 animate" fill="none">
+                                <path d="M17 10H7L12 16L17 10Z" fill="currentcolor" />
+                            </svg>
+                        </a>
+                        <!-- dropdown -->
+                        <div class="absolute hidden w-40 pt-2 -translate-x-1/2 left-1/2 top-full group-hover:block">
+                            <div
+                                class="p-1 bg-white border rounded-lg border-black-12 shadow-nav-dropdown backdrop-blur-32">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.blazesql.com/team-pricing"
+                                            class="flex items-center gap-2 text-black-100 text-sm animate font-medium -tracking-0.14 hover:bg-brand-dark-12 p-3 rounded hover:text-brand-dark">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.99292 11.6719C10.0671 11.6719 12.6946 12.1377 12.6946 13.9985C12.6946 15.8594 10.0846 16.3385 6.99292 16.3385C3.91792 16.3385 1.29125 15.8769 1.29125 14.0152C1.29125 12.1535 3.90042 11.6719 6.99292 11.6719Z"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.99292 9.01634C4.97459 9.01634 3.33792 7.38051 3.33792 5.36217C3.33792 3.34384 4.97459 1.70801 6.99292 1.70801C9.01042 1.70801 10.6471 3.34384 10.6471 5.36217C10.6546 7.37301 9.02959 9.00884 7.01875 9.01634H6.99292Z"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M12.7359 8.06741C14.0701 7.87991 15.0976 6.73491 15.1001 5.34908C15.1001 3.98324 14.1042 2.84991 12.7984 2.63574"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M14.4962 11.2764C15.7887 11.4689 16.6912 11.9222 16.6912 12.8555C16.6912 13.498 16.2662 13.9147 15.5795 14.1755"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            For teams
+                                        </a>
+                                        <a href="https://www.blazesql.com/blaze-pricing"
+                                            class="flex items-center gap-2 text-black-100 text-sm animate font-medium -tracking-0.14 hover:bg-brand-dark-12 p-3 rounded hover:text-brand-dark">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18"
+                                                viewBox="0 0 14 18" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.9873 11.7891C3.76428 11.7891 1.0119 12.2764 1.0119 14.228C1.0119 16.1795 3.74682 16.6843 6.9873 16.6843C10.2103 16.6843 12.9619 16.1962 12.9619 14.2454C12.9619 12.2946 10.2278 11.7891 6.9873 11.7891Z"
+                                                    stroke="currentcolor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.9873 9.00523C9.10238 9.00523 10.8167 7.29015 10.8167 5.17507C10.8167 3.05999 9.10238 1.3457 6.9873 1.3457C4.87222 1.3457 3.15714 3.05999 3.15714 5.17507C3.15 7.283 4.85317 8.99808 6.96032 9.00523H6.9873Z"
+                                                    stroke="currentcolor" stroke-width="1.42857" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            For individuals
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Book demo/ Get started -->
+                <div class="items-center hidden gap-4 md:flex">
+                    <a href="https://www.blazesql.com/demo-request"><button type="button"
+                            class="border-transparent btn-main btn-secondary">Book a demo</button></a>
+                    <a href="https://www.blazesql.com/app"><button type="button" class="btn-main btn-primary">Get
+                            started</button></a>
+                </div>
+
+                <!-- toggler -->
+                <button type="button" class="block hover-opacity md:hidden open-navbar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2 8H22M22 16H2" stroke="#0F0F10" stroke-width="1.5" />
+                    </svg>
+                </button>
+
+                <!-- Navbar mobile -->
+                <div
+                    class="fixed top-0 left-0 flex flex-col items-center justify-between w-full h-full bg-white navbar-mobile">
+                    <div class="flex items-center justify-between w-full px-4 py-3">
+                        <!-- Logo -->
+                        <a href="/" class="flex items-center gap-2 lg:gap-3 hover-opacity">
+                            <img src="images/blazesql.svg" alt="blazesql">
+                            <p class="text-xl -tracking-0.4 text-brand-default font-semibold">BlazeSQL</p>
+                        </a>
+                        <!-- toggler -->
+                        <button type="button" class="block hover-opacity close-navbar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path d="M5 5L19 19M19 5L5 19" stroke="#0F0F10" stroke-width="1.5" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col items-start justify-center flex-1 w-full gap-10 px-4">
+                        <li>
+                            <a href="https://www.blazesql.com/privacy"
+                                class="capitalize label-l animate hover:text-brand-default">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="https://www.blazesql.com/white-label-embedding"
+                                class="capitalize label-l animate hover:text-brand-default">White-label &
+                                embed</a>
+                        </li>
+                        <li>
+                            <a href="https://www.blazesql.com/team-pricing"
+                                class="capitalize label-l animate hover:text-brand-default">Pricing for
+                                teams</a>
+                        </li>
+                        <li>
+                            <a href="https://www.blazesql.com/blaze-pricing"
+                                class="capitalize label-l animate hover:text-brand-default">Pricing for
+                                individuals</a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-between w-full gap-3 px-4 py-10 border-t border-black-12">
+                        <a href="https://www.blazesql.com/app"><button type="button"
+                                class="w-full btn-main btn-primary">Get started</button></a>
+                        <a href="https://www.blazesql.com/demo-request"><button type="button"
+                                class="w-full btn-main btn-secondary">Book a demo</button></a>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <!-- END header -->
+
+    <main>
+        <!-- Hero section -->
+        <section class="pt-10 overflow-hidden bg-white md:pt-0 md:pb-20 video-section">
+            <div class="px-0 container-center md:px-4">
+                <div class="flex flex-col items-start justify-between w-full lg:items-center lg:flex-row md:pt-10">
+                    <div class="w-full md:px-0 px-4 lg:w-[500px] shrink-0 md:h-full relative z-10">
+                        <div class="lg:max-w-md">
+                            <h1 class="mb-4 lg::mb-6">
+                                Turn questions <br class="hidden lg:block"> into data insights, <br
+                                    class="hidden md:block">with SQL AI.
+                            </h1>
+                            <p class="lg:max-w-sm text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                Make your team more informed, and save time, by connecting an SQL AI chatbot to your
+                                database.
+                            </p>
+                            <div class="flex items-center gap-3 mt-8 md:mt-10">
+                                <a href="https://www.blazesql.com/app" class="btn-main btn-primary btn-md">Get
+                                    started</a>
+                                <a href="https://www.blazesql.com/demo-request"
+                                    class="btn-main btn-secondary btn-md">Book a demo</a>
+                            </div>
+                            <p class="hidden max-w-xs md:mt-16 sm-desktop:mt-20 xl:mt-28 label-s lg:block">
+                              Do you know SQL? If so, we recommend switching to the technical version
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative z-0 w-full mt-5 lg:w-1/2 lg:mt-0">
+                        <!-- Technical -->
+                        <div
+                            class="technical-content w-full lg:h-[650px] sm-desktop:h-[690px] xl:h-[830px] l-desktops:h-[830px]">
+                            <!-- Video desktop -->
+                            <div
+                                class="w-full md:block hidden lg:w-[50rem] sm-desktop:w-[55rem] xl:w-[60rem] l-desktops:w-[62rem] flex-none mt-16 md:mt-0 lg:relative lg:-left-28 xl:-left-28 l-desktops:-left-32 -top-20 -z-20">
+                                <video alt="SQL AI Chatbot generating and running a query"
+                                    class="w-full h-auto bg-transparent" poster="images/1img-hero-techmode.png" autoplay
+                                    muted playsinline>
+                                    <source src="images/1-hero-techmode.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Video mobile -->
+                            <div
+                                class="block md:hidden video-mobile bg-[url('../images/1img-hero-techmode-mobile.png')] bg-no-repeat bg-cover">
+                                <video alt="SQL AI Chatbot generating and running a query (mobile version)"
+                                    class="w-full h-auto bg-transparent" poster="images/1img-hero-techmode-mobile.png"
+                                    autoplay muted playsinline>
+                                    <source src="images/1-hero-techmode-mobile.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <!-- Non-technical -->
+                        <div
+                            class="non-technical-content active w-full lg:h-[650px] sm-desktop:h-[690px] xl:h-[830px] l-desktops:h-[830px]">
+                            <!-- Video desktop -->
+                            <div
+                                class="w-full md:block hidden lg:w-[50rem] sm-desktop:w-[55rem] xl:w-[60rem] l-desktops:w-[62rem] flex-none mt-16 md:mt-0 lg:relative lg:-left-28 xl:-left-28 l-desktops:-left-32 -top-20 -z-20">
+                                <video alt="No-code SQL Chatbot getting and graphing data"
+                                    class="w-full h-auto bg-transparent" poster="images/1img (hero).png" autoplay muted playsinline>
+                                    <source src="images/1-hero.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <!-- Video mobile -->
+                            <div
+                                class="block md:hidden video-mobile bg-[url('../images/1img-hero-mobile.png')] bg-no-repeat bg-cover">
+                                <video alt="No-code SQL Chatbot getting and graphing data (mobile version)"
+                                    class="w-full h-auto bg-transparent" poster="images/1img-hero-mobile.png" autoplay muted playsinline>
+                                    <source src="images/1-hero-mobile.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <!-- Technical/Non-technical button -->
+                        <div
+                            class="bottom-0 right-0 flex items-center justify-center flex-auto mt-20 lg:absolute lg:bottom-20 sm-desktop:bottom-20 xl:bottom-20 lg:justify-end lg:mt-0">
+                            <div class="hidden xl:block">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="99" viewBox="0 0 701 99" fill="none">
+                                    <path
+                                        d="M2.05605 0.250969C1.3664 0.21995 0.782131 0.753882 0.751114 1.44355C0.720095 2.1332 1.25403 2.71742 1.94369 2.74846L2.05605 0.250969ZM498 94.4998L497.824 93.2622L498 94.4998ZM539.515 47.4281L540.53 46.6987L540.5 46.6569L540.467 46.6176L539.515 47.4281ZM518.909 38.1276L519.004 39.374L518.909 38.1276ZM525.598 64.225L526.062 63.0645L525.598 64.225ZM624.5 67.4998L624.717 68.7309L624.5 67.4998ZM699.5 38.1276L700.711 38.4385C700.805 38.0739 700.729 37.6865 700.505 37.384C700.281 37.0814 699.933 36.8959 699.557 36.8789L699.5 38.1276ZM674.557 35.7511C673.867 35.72 673.283 36.2539 673.252 36.9435C673.221 37.6332 673.755 38.2175 674.444 38.2486L674.557 35.7511ZM692.288 61.189C692.117 61.8576 692.519 62.5389 693.188 62.7106C693.857 62.8823 694.538 62.4794 694.71 61.8107L692.288 61.189ZM1.94369 2.74846C74.1903 5.99832 121.113 9.62094 162.456 17.4156C203.78 25.2066 239.569 37.1736 289.536 57.1603L290.465 54.8391C240.431 34.8258 204.471 22.7929 162.919 14.9589C121.387 7.12859 74.3098 3.50118 2.05605 0.250969L1.94369 2.74846ZM289.536 57.1603C389.658 97.2091 446.387 103.095 498.175 95.7374L497.824 93.2622C446.612 100.538 390.342 94.79 290.465 54.8391L289.536 57.1603ZM498.175 95.7374C516.512 93.1322 529.898 84.9775 537.337 75.4317C544.751 65.9171 546.356 54.8057 540.53 46.6987L538.5 48.1575C543.453 55.05 542.368 64.9073 535.365 73.8951C528.385 82.8518 515.624 90.7332 497.824 93.2622L498.175 95.7374ZM540.467 46.6176C532.797 37.612 524.178 36.4718 518.814 36.8812L519.004 39.374C523.765 39.0106 531.526 39.9754 538.563 48.2386L540.467 46.6176ZM518.814 36.8812C514.856 37.1833 511.722 38.8811 509.939 41.4707C508.146 44.0749 507.832 47.4206 509.226 50.7324L511.53 49.763C510.436 47.1621 510.732 44.7268 511.998 42.8887C513.274 41.036 515.649 39.6301 519.004 39.374L518.814 36.8812ZM509.226 50.7324C511.856 56.9848 516.825 62.0618 525.134 65.3856L526.062 63.0645C518.308 59.9624 513.874 55.3359 511.53 49.763L509.226 50.7324ZM525.134 65.3856C562.676 80.404 598.762 73.2944 624.717 68.7309L624.284 66.2687C598.238 70.8481 562.849 77.7806 526.062 63.0645L525.134 65.3856ZM624.717 68.7309C648.279 64.5881 676.516 57.1771 700.257 39.1226L698.744 37.1327C675.483 54.8223 647.722 62.1477 624.284 66.2687L624.717 68.7309ZM699.557 36.8789L674.557 35.7511L674.444 38.2486L699.444 39.3764L699.557 36.8789ZM698.29 37.8168L692.288 61.189L694.71 61.8107L700.711 38.4385L698.29 37.8168Z"
+                                        fill="#0F0F10" fill-opacity="0.16" />
+                                </svg>
+                            </div>
+                            <div
+                                class="relative z-0 flex items-center h-12 p-1 -mt-10 overflow-hidden border rounded-full shrink-0 border-black/10 bg-black-12 shadow-tab-shadow md:-mr-4 button-container">
+                                <a href="#"
+                                    class="px-6 border-transparent rounded-full shrink-0 btn-main btn-secondary technical-btn hover:border-transparent hero-btn">Technical</a>
+                                <a href="#"
+                                    class="px-3 border-transparent rounded-full shrink-0 btn-main btn-secondary hover:border-transparent non-technical-btn hero-btn active">Non
+                                    technical</a>
+                                <div
+                                    class="absolute top-0.5 left-0.5 w-[115px] h-[calc(100%-4px)] rounded-full pointer-events-none slider-background -z-10 bg-brand-default translate-x-[115px]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="block w-full max-w-xs mx-auto mt-10 mb-10 text-center label-s lg:hidden md:mb-0">
+                           Do you know SQL? If so, we recommend switching to the technical version
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END hero section -->
+
+        <!-- Trusted by -->
+        <section class="py-10 overflow-hidden bg-white border-t border-black-12 md:py-20">
+                <p class="text-center overline-text">Trusted by top teams</p>
+                <!-- swiper -->
+                <div class="mt-10 !overflow-visible swiper trusted-by-slider xl-desktops:!overflow-hidden">
+                    <!-- swiper wrapper -->
+                    <div class="!ease-linear swiper-wrapper">
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/gojek.svg" alt="gojek"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/siemens.svg" alt="siemens"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/wb.svg" alt="wb"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/amazon.svg" alt="amazon"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/flixbus.svg" alt="flixbus"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/wix.svg" alt="wix"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/ebay.svg" alt="ebay"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/gojek.svg" alt="gojek"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/siemens.svg" alt="siemens"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/wb.svg" alt="wb"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/amazon.svg" alt="amazon"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/flixbus.svg" alt="flixbus"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/wix.svg" alt="wix"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/ebay.svg" alt="ebay"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/gojek.svg" alt="gojek"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/siemens.svg" alt="siemens"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/wb.svg" alt="wb"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/amazon.svg" alt="amazon"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/flixbus.svg" alt="flixbus"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/wix.svg" alt="wix"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/ebay.svg" alt="ebay"
+                                class="grayscale w-[180px] h-[72px] object-contain mx-auto">
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- END trusted by -->
+
+        <!-- Features -->
+        <!-- Section Features -->
+        <section
+            class="relative lg:h-[700px] z-0 xl:h-[800px] bg-light-bg-3 l-desktops:h-[880px] xl-desktops:h-auto flex flex-row items-center pt-16 overflow-hidden md:pt-120 video-section">
+            <div class="container-center">
+                <div class="feature-block">
+                    <div class="flex flex-col items-start lg:w-[390px]">
+                        <div class="lg:max-w-sm">
+                            <h2 class="mb-4 md:mb-6">
+                                Less bottlenecks
+                                & More intelligence
+                            </h2>
+                            <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                Our AI chatbot makes it effortless for anyone to get important insights from
+                                your
+                                database. This makes your teams faster
+                                & more informed.
+                            </p>
+                            <div class="flex items-center justify-start w-full gap-3 mt-8 md:mt-10">
+                                <a href="https://www.blazesql.com/app" class="btn-main btn-primary btn-md">Get
+                                    started</a>
+                                <a href="https://www.blazesql.com/demo-request"
+                                    class="btn-main btn-secondary btn-md">Book a demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative ml-auto lg:w-1/2 -z-10 -top-7 sm:-top-12 md:-top-20 lg:static">
+                        <!-- Video desktop -->
+                        <div
+                            class="lg:relative xl-desktops:static lg:top-1/2 right-32 flex-none lg:w-[41rem] sm-desktop:w-[48rem] xl:w-[55rem] -z-10 md:block hidden xl-desktops:-ml-40">
+                            <video alt="no-code SQL chatbot graphing data" class="w-full h-full" poster="images/2img.png"
+                                autoplay muted playsinline>
+                                <source src="images/2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Video mobile -->
+                        <div class="block md:hidden video-mobile">
+                            <video class="w-full h-auto" alt="no-code SQL chatbot graphing data (mobile version)"
+                                poster="images/2img-mobile.png" autoplay muted playsinline>
+                                <source src="images/2-mobile.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Features -->
+        <section
+            class="relative lg:h-[700px] z-0 xl:h-[800px] bg-light-bg-3 l-desktops:h-[880px] xl-desktops:h-auto flex flex-row items-center overflow-hidden video-section">
+            <div class="container-center">
+                <div class="flex-col-reverse lg:flex-row feature-block">
+                    <div
+                        class="mr-auto lg:w-1/2 xl-desktops:-ml-[90px] relative -z-10 -top-7 sm:-top-12 md:-top-20 lg:static">
+                        <!-- Video desktop -->
+                        <div
+                            class="lg:relative xl-desktops:static lg:top-1/2 -left-10 xl:-left-28 l-desktops:-left-32 flex-none lg:w-[41rem] sm-desktop:w-[46rem] xl:w-[55rem] -z-10 md:block hidden">
+                            <video alt="SQL AI Chatbot generating and executing a query" class="w-full h-full"
+                                poster="images/3img.png" autoplay muted playsinline>
+                                <source src="images/3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Video mobile -->
+                        <div class="block md:hidden video-mobile">
+                            <video alt="SQL AI Chatbot generating and executing a query (mobile version)"
+                                class="w-full h-auto" poster="images/3img-mobile.png" autoplay muted playsinline>
+                                <source src="images/3-mobile.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start lg:items-end lg:w-[390px]">
+                        <div class="lg:max-w-sm">
+                            <h2 class="mb-4 md:mb-6">
+                                Save Technical Effort
+                            </h2>
+                            <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                Technical people can focus on their own work instead of jumping between ad-hoc
+                                requests
+                                from non-technical colleagues,
+                                and stop wasting time with their own SQL queries by using BlazeSQL’s AI SQL Chatbot.
+                            </p>
+                            <div class="flex items-center justify-start w-full gap-3 mt-8 md:mt-10">
+                                <a href="https://www.blazesql.com/app" class="btn-main btn-primary btn-md">Get
+                                    started</a>
+                                <a href="https://www.blazesql.com/demo-request"
+                                    class="btn-main btn-secondary btn-md">Book a demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Features -->
+        <section
+            class="relative lg:h-[700px] z-0 xl:h-[800px] bg-light-bg-3 l-desktops:h-[880px] xl-desktops:h-auto flex flex-row items-center overflow-hidden pb-16 md:pb-120 video-section">
+            <div class="container-center">
+                <div class="feature-block">
+                    <div class="flex flex-col items-start w-full lg:w-[390px]">
+                        <div class="lg:max-w-sm">
+                            <h2 class="mb-4 md:mb-6">
+                                Lightning-Fast Insights
+                            </h2>
+                            <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                Blaze AI generates complex SQL queries in seconds, and is available 24/7. Even an
+                                SQL
+                                expert can’t work this quickly.
+                            </p>
+                            <div class="flex items-center justify-start w-full gap-3 mt-8 md:mt-10">
+                                <a href="https://www.blazesql.com/app" class="btn-main btn-primary btn-md">Get
+                                    started</a>
+                                <a href="https://www.blazesql.com/demo-request"
+                                    class="btn-main btn-secondary btn-md">Book a demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative ml-auto lg:w-1/2 -z-10 -top-7 sm:-top-12 md:-top-20 lg:static">
+                        <!-- Video desktop -->
+                        <div
+                            class="lg:relative xl-desktops:static lg:top-1/2 right-32 flex-none lg:w-[41rem] sm-desktop:w-[48rem] xl:w-[55rem] -z-10 md:block hidden xl-desktops:-ml-40">
+                            <video alt="Chatbot generating an SQL Query in seconds" class="w-full h-full"
+                                poster="images/4img.png" autoplay muted playsinline>
+                                <source src="images/4.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Video mobile -->
+                        <div class="block md:hidden video-mobile">
+                            <video alt="Chatbot generating an SQL Query in seconds mobile version" class="w-full h-auto"
+                                poster="images/4img-mobile.png" autoplay muted playsinline>
+                                <source src="images/4-mobile.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END features -->
+
+        <!-- Security & Privacy -->
+        <section
+            class="py-16 md:py-40 bg-dark-bg relative z-0 lg:h-[700px] xl:h-[800px] l-desktops:h-[880px] xl-desktops:h-auto flex flex-row items-center overflow-hidden">
+            <div class="container-center">
+                <div class="flex flex-col-reverse items-center justify-between h-full gap-20 lg:gap-5 lg:flex-row">
+                    <div class="xl-desktops:-ml-[70px] w-full lg:w-1/2">
+                        <div
+                            class="lg:relative xl-desktops:static lg:top-1/2 xl:-left-20 l-desktops:-left-32 flex-none lg:w-[33rem] sm-desktop:w-[40rem] xl:w-[48rem] l-desktops:w-[50rem] -z-10">
+                            <img alt="Secure SQL AI Chatbot doesnt see data" src="images/section3-img.png"
+                                alt="Enterprise-Level Security & Privacy" class="hidden w-full md:block" loading="lazy">
+                            <img alt="Secure SQL AI Chatbot doesnt see data (mobile version)"
+                                src="images/section3-img-mobile.png" alt="Enterprise-Level Security & Privacy"
+                                class="block w-full md:hidden" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start lg:w-[390px]">
+                        <div class="lg:max-w-sm">
+                            <h2 class="mb-4 text-white md:mb-6">
+                                Enterprise-Level Security & Privacy
+                            </h2>
+                            <p class="text-white text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                Our AI only sees metadata, such as table and column names, and the desktop version keeps
+                                query results strictly local
+                                and private.
+                            </p>
+                            <div class="flex items-center justify-start w-full gap-3 mt-10">
+                                <a href="https://www.blazesql.com/app" class="text-white btn-main btn-primary btn-md">
+                                    Get started
+                                </a>
+                                <a href="https://www.blazesql.com/demo-request"
+                                    class="text-white btn-main btn-secondary btn-md border-white-12 hover:border-white-40">
+                                    Book a demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Security & Privacy -->
+
+        <!-- Features -->
+        <!-- Section Features -->
+        <section
+            class="relative lg:h-[700px] z-0 xl:h-[800px] bg-light-bg-3 l-desktops:h-[880px] xl-desktops:h-auto flex flex-row items-center overflow-hidden pt-16 md:pt-120 video-section">
+            <div class="container-center">
+                <div class="feature-block">
+                    <div class="flex flex-col items-start w-full lg:w-[390px]">
+                        <div class="lg:max-w-sm">
+                            <h2 class="mb-4 md:mb-6">
+                                Reliable Data Analysis
+                            </h2>
+                            <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                Our AI can generate the correct queries for your unique business by:
+                            </p>
+                            <ul class="ml-4 list-disc body-text">
+                                <li>Automatically extracting database metadata (table names, column names, etc.)
+                                </li>
+                                <li>Using Information you enter into the AI knowledge base</li>
+                                <li>Leveraging Industry expertise contained in our AI Models</li>
+                                <li>Remembering what you teach it.</li>
+                            </ul>
+                            <div class="flex items-center justify-start w-full gap-3 mt-8 md:mt-10">
+                                <a href="https://www.blazesql.com/app" class="btn-main btn-primary btn-md">Get
+                                    started</a>
+                                <a href="https://www.blazesql.com/demo-request"
+                                    class="btn-main btn-secondary btn-md">Book a demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative ml-auto lg:w-1/2 -z-10 -top-7 sm:-top-12 md:-top-20 lg:static">
+                        <!-- Video desktop -->
+                        <div
+                            class="lg:relative xl-desktops:static lg:top-1/2 right-24 xl:right-32 flex-none lg:w-[41rem] sm-desktop:w-[46rem] xl:w-[55rem] -z-10 md:block hidden xl-desktops:-ml-40">
+                            <video alt="Knowledge base for AI Data Analyst chatbot" class="w-full h-full"
+                                poster="images/5img.png" autoplay muted playsinline>
+                                <source src="images/5.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- Video mobile -->
+                        <div class="block md:hidden video-mobile">
+                            <video alt="Knowledge base for AI Data Analyst chatbot (mobile version)"
+                                class="w-full h-auto" poster="images/5img-mobile.png" autoplay muted playsinline>
+                                <source src="images/5-mobile.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Features  -->
+        <section
+            class="relative lg:h-[700px] z-0 xl:h-[800px] bg-light-bg-3 l-desktops:h-[880px] xl-desktops:h-auto flex flex-row items-center overflow-hidden video-section">
+            <div class="container-center">
+                <div class="flex-col-reverse lg:flex-row feature-block">
+                    <div
+                        class="w-full lg:w-1/2 xl-desktops:-ml-[100px] relative -z-10 -top-7 sm:-top-12 md:-top-20 lg:static">
+                        <!-- Video desktop -->
+                        <div
+                            class="lg:relative xl-desktops:static lg:top-1/2 -left-10 xl:-left-28 l-desktops:-left-32 xl-desktops:-left-36 flex-none lg:w-[41rem] sm-desktop:w-[48rem] xl:w-[55rem] -z-10 md:block hidden">
+                            <video alt="Dashboards created by AI Chatbot for SQL Database" class="w-full h-full"
+                                poster="images/6img.png" autoplay muted playsinline>
+                                <source src="images/6.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- Video mobile -->
+                        <div class="block md:hidden video-mobile">
+                            <video alt="Dashboards created by AI Chatbot for SQL Database (mobile version)"
+                                class="w-full h-auto" poster="images/6img-mobile.png" autoplay muted playsinline>
+                                <source src="images/6-mobile.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start lg:items-end lg:w-[390px]">
+                        <div class="lg:max-w-sm">
+                            <h2 class="mb-4 md:mb-6">
+                                Hyper-Personalized Dashboards
+                            </h2>
+                            <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                Add data insights to a dashboard from the AI Chat instantly. Everyone can drag
+                                and drop
+                                to create dashboards tailored to
+                                their unique needs.
+                            </p>
+                            <div class="flex items-center justify-start w-full gap-3 mt-8 md:mt-10">
+                                <a href="https://www.blazesql.com/app" class="btn-main btn-primary btn-md">Get
+                                    started</a>
+                                <a href="https://www.blazesql.com/demo-request"
+                                    class="btn-main btn-secondary btn-md">Book a demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Features  -->
+        <section
+            class="relative lg:h-[700px] z-0 xl:h-[800px] bg-light-bg-3 l-desktops:h-[880px] xl-desktops:h-auto flex flex-row items-center overflow-hidden pb-16 md:pb-120 video-section">
+            <div class="container-center">
+                <div class="feature-block">
+                    <div class="flex flex-col items-start w-full lg:w-[390px]">
+                        <div class="lg:max-w-sm">
+                            <h2 class="mb-4 md:mb-6">
+                                Proactive, So You Don’t Have To Be
+                            </h2>
+                            <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                BlazeSQL suggests key insights tailored to your job and your priorities, and
+                                sends you
+                                weekly updates. You become
+                                informed and more effective, even without being proactive.
+                            </p>
+                            <div class="flex items-center justify-start w-full gap-3 mt-8 md:mt-10">
+                                <a href="https://www.blazesql.com/app" class="btn-main btn-primary btn-md">Get
+                                    started</a>
+                                <a href="https://www.blazesql.com/demo-request"
+                                    class="btn-main btn-secondary btn-md">Book a demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative ml-auto lg:w-1/2 -z-10 -top-7 sm:-top-12 md:-top-20 lg:static">
+                        <!-- Video desktop -->
+                        <div
+                            class="lg:relative xl-desktops:static lg:top-1/2 right-24 xl:right-32 flex-none lg:w-[41rem] sm-desktop:w-[48rem] xl:w-[55rem] -z-10 md:block hidden xl-desktops:-ml-40">
+                            <video alt="AI Generated reports and suggestions for SQL Database" class="w-full h-full"
+                                poster="images/7img.png" autoplay muted playsinline>
+                                <source src="images/7.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- Video mobile -->
+                        <div class="block md:hidden video-mobile">
+                            <video alt="AI Generated reports and suggestions for SQL Database (mobile version)"
+                                class="w-full h-auto" poster="images/7img-mobile.png" autoplay muted playsinline>
+                                <source src="images/7-mobile.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END features -->
+
+        <!-- Popular databases -->
+        <section class="py-10 overflow-hidden border-t border-black-12 md:py-20 bg-light-bg-3">
+            <div>
+                <h2 class="max-w-sm px-4 mx-auto text-center md:px-0">Supporting the most popular databases</h2>
+                <!-- swiper -->
+                <div class="mt-10 swiper popular-databases">
+                    <!-- swiper wrapper -->
+                    <div class="!ease-linear swiper-wrapper">
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/redshift.svg" alt="redshift ai chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/MySQL.svg" alt="MySQL ai chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/MariaDB.svg" alt="MariaDB AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/sqlserver.svg" alt="SQL Server AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/snowflake.svg" alt="snowflake AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/bigquery.svg" alt="BigQuery AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/postgresql.svg" alt="PostgreSQL AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/redshift.svg" alt="Redshift AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/MySQL.svg" alt="MySQL ai chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/MariaDB.svg" alt="MariaDB AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/sqlserver.svg" alt="SQL Server AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/snowflake.svg" alt="Snowflake AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/bigquery.svg" alt="BigQuery AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <img src="images/postgresql.svg" alt="PostgreSQL AI Chatbot"
+                                class="grayscale w-[220px] h-[65px] object-contain mx-auto" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Popular databases -->
+
+        <!-- Setup -->
+        <section class="py-16 md:py-40">
+            <div class="container-center">
+                <div class="max-w-lg text-left lg:mx-auto lg:text-center">
+                    <h2>
+                        Set up BlazeSQL & get insights in under 1 mins
+                    </h2>
+                    <div class="flex items-center justify-start gap-3 mt-8 lg:justify-center md:mt-10">
+                        <a href="https://www.blazesql.com/app" class="btn-main btn-primary btn-md">Get started</a>
+                        <a href="https://www.blazesql.com/demo-request" class="btn-main btn-secondary btn-md">Book a
+                            demo</a>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col justify-between gap-10 mt-20 lg:items-center sm-desktop:gap-20 lg:mt-28 lg:gap-28 lg:flex-row fill-section video-section">
+                    <div class="relative z-0 w-full h-full overflow-hidden lg:w-80">
+                        <div class="h-full w-0.5 bg-black-12 absolute left-4 top-0 -z-10">
+                            <div class="w-full h-0 bg-brand-default fill-line"></div>
+                        </div>
+                        <!-- item -->
+                        <div class="py-3 bg-white md:py-5 mb-36 md:mb-40 last:mb-0 fill-item">
+                            <div class="flex items-center gap-10">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                                        fill="none" class="fill-icon active">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M33.6983 24.22C33.6983 30.1833 30.1833 33.6983 24.22 33.6983H11.25C5.27167 33.6983 1.75 30.1833 1.75 24.22V11.22C1.75 5.265 3.94 1.75 9.905 1.75H13.2383C14.435 1.75167 15.5617 2.31333 16.2783 3.27167L17.8 5.295C18.52 6.25167 19.6467 6.815 20.8433 6.81667H25.56C31.5383 6.81667 33.745 9.86 33.745 15.945L33.6983 24.22Z"
+                                            stroke="#5850EC" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M10.4683 22.1048H25.0266" stroke="#5850EC" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <p class="max-w-60 label-m">
+                                    Enter your database credentials
+                                </p>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="py-3 bg-white md:py-5 mb-36 md:mb-40 last:mb-0 fill-item">
+                            <div class="flex items-center gap-10">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-icon" width="31" height="34"
+                                        viewBox="0 0 31 34" fill="none">
+                                        <path d="M21.1935 24.0384H9.16016" stroke="currentcolor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M21.1935 17.0599H9.16016" stroke="currentcolor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M13.7523 10.099H9.16064" stroke="currentcolor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M21.5143 1.58203C21.5143 1.58203 8.71931 1.5887 8.69931 1.5887C4.09931 1.61703 1.25098 4.6437 1.25098 9.26036V24.587C1.25098 29.227 4.12098 32.2654 8.76098 32.2654C8.76098 32.2654 21.5543 32.2604 21.576 32.2604C26.176 32.232 29.026 29.2037 29.026 24.587V9.26036C29.026 4.62036 26.1543 1.58203 21.5143 1.58203Z"
+                                            stroke="currentcolor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <p class="max-w-60 label-m">
+                                    Select the tables you
+                                    want to use
+                                </p>
+                            </div>
+                        </div>
+                        <!-- item -->
+                        <div class="py-3 bg-white md:py-5 mb-36 md:mb-40 last:mb-0 fill-item">
+                            <div class="flex items-center gap-10">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="fill-icon" width="36" height="36"
+                                        viewBox="0 0 36 36" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M29.7858 29.7838C24.6922 34.8779 17.1498 35.9785 10.9775 33.124C10.0663 32.7572 9.3193 32.4607 8.60912 32.4607C6.63098 32.4724 4.16877 34.3904 2.8891 33.1123C1.60942 31.8325 3.52893 29.3683 3.52893 27.3782C3.52893 26.668 3.24419 25.9343 2.87737 25.0213C0.0215472 18.85 1.12368 11.3051 6.21726 6.21266C12.7195 -0.291962 23.2835 -0.291962 29.7858 6.21099C36.2997 12.7257 36.288 23.2808 29.7858 29.7838Z"
+                                            stroke="currentcolor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M24.5661 18.6888H24.5811" stroke="currentcolor" stroke-width="4"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.8839 18.6888H17.8989" stroke="currentcolor" stroke-width="4"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M11.2023 18.6888H11.2173" stroke="currentcolor" stroke-width="4"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <p class="max-w-60 label-m">
+                                    Start chatting with your
+                                    AI Data Analyst
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-auto md:flex-1">
+                        <video class="border border-black-12 aspect-video rounded-xl" poster="images/setup-img.png"
+                            autoplay muted playsinline>
+                            <source src="images/quick_setup_demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END setup -->
+
+        <!-- Who we are -->
+        <section class="py-16 bg-dark-bg md:py-40">
+            <div class="container-center">
+                <div class="grid grid-cols-1">
+                    <div class="max-w-xl md:ml-auto">
+                        <p class="overline-text text-brand-default">Who we are?</p>
+                        <h3 class="mt-6 text-white md:mt-10">
+                            Experts in data science, automation, & management consulting across Product management,
+                            E-commerce & Retail, Supply
+                            chain, Healthcare, B2B & B2C Tech, and Finance.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END who we are -->
+
+        <!-- Testimonials -->
+        <section class="pt-16 border-t bg-dark-bg md:pt-28 border-white-12">
+            <h2 class="max-w-2xl px-5 mx-auto text-center text-white h1">
+                Over 120k insights generated
+            </h2>
+            <div class="container-center">
+                <div class="mt-10 -mb-72 md:mt-20 swiper insights md:-mb-96 xl-desktops:-mb-72">
+                    <!-- swiper wrapper -->
+                    <div class="!h-auto mb-16 md:mb-20 swiper-wrapper">
+                        <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/bradyscaspar"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        Blaze saves our team hours of manual work each week by automating the process of
+                                        writing
+                                        the queries we use to analyze
+                                        our business. It unlocks a new level of analysis, filling in our SQL knowledge
+                                        gaps
+                                        and
+                                        writing complex queries that
+                                        enable us to dig deeper into our data than ever before.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Brady-Caspar.png" alt="hoo.be CTO uses BlazeSQL"
+                                            class="insight-footer-img">
+                                        <a href="https://hoo.be/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/hoobe-logo.png" alt="hoobe uses BlazeSQL"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Brady Caspar</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">CTO // hoo.be</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/thibautnguyen/"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        Sometimes all you want is a quick answer from your data that is not so obvious
+                                        to
+                                        query
+                                        or you need a starting point for
+                                        a deeper BI analysis. That is to me the gap filled by BlazeSQL and it saves our
+                                        team
+                                        quite some time.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Thibaut-Nguyen.png" alt="Thibaut Nguyen"
+                                            class="insight-footer-img">
+                                        <a href="https://poppy.be/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/Poppy-Mobility.png" alt="Poppy Mobility"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Thibaut Nguyen</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">CTO // Poppy Mobility</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/sej-sander-thorsen-0367b337/"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        With BlazeSQL, we have gotten a fast-track to data-driven insights. Blaze enables us to better understand our customers and make data driven decisions. We can quickly test a hypothesis, without involving engineering.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Sej-Sander.png" alt="Sej Sander Thorsen"
+                                            class="insight-footer-img">
+                                        <a href="https://klarpris.dk/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/Klarpris.png" alt="Klarpris"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Sej Sander Thorsen</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">Chief Product Officer // Klarpris</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/bradyscaspar"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        Blaze saves our team hours of manual work each week by automating the process of
+                                        writing
+                                        the queries we use to analyze
+                                        our business. It unlocks a new level of analysis, filling in our SQL knowledge
+                                        gaps
+                                        and
+                                        writing complex queries that
+                                        enable us to dig deeper into our data than ever before.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Brady-Caspar.png" alt="hoo.be CTO uses BlazeSQL"
+                                            class="insight-footer-img">
+                                        <a href="https://hoo.be/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/hoobe-logo.png" alt="hoobe uses BlazeSQL"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Brady Caspar</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">CTO // hoo.be</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/thibautnguyen/"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        Sometimes all you want is a quick answer from your data that is not so obvious
+                                        to
+                                        query
+                                        or you need a starting point for
+                                        a deeper BI analysis. That is to me the gap filled by BlazeSQL and it saves our
+                                        team
+                                        quite some time.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Thibaut-Nguyen.png" alt="Thibaut Nguyen"
+                                            class="insight-footer-img">
+                                        <a href="https://poppy.be/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/Poppy-Mobility.png" alt="Poppy Mobility"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Thibaut Nguyen</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">CTO // Poppy Mobility</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- slide -->
+                        <div class="swiper-slide !h-auto">
+                            <div class="insight-card">
+                                <div>
+                                    <div class="insight-card-header">
+                                        <img src="images/quote.svg" alt="quote" class="object-contain w-10 h-10">
+                                        <div class="w-7 h-7">
+                                            <a href="https://www.linkedin.com/in/sej-sander-thorsen-0367b337/"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                    viewBox="0 0 28 28" fill="none">
+                                                    <path
+                                                        d="M25.9273 0H2.06719C0.924219 0 0 0.902344 0 2.01797V25.9766C0 27.0922 0.924219 28 2.06719 28H25.9273C27.0703 28 28 27.0922 28 25.982V2.01797C28 0.902344 27.0703 0 25.9273 0ZM8.30703 23.8602H4.15078V10.4945H8.30703V23.8602ZM6.22891 8.67344C4.89453 8.67344 3.81719 7.59609 3.81719 6.26719C3.81719 4.93828 4.89453 3.86094 6.22891 3.86094C7.55781 3.86094 8.63516 4.93828 8.63516 6.26719C8.63516 7.59062 7.55781 8.67344 6.22891 8.67344ZM23.8602 23.8602H19.7094V17.3633C19.7094 15.8156 19.682 13.8195 17.5492 13.8195C15.3891 13.8195 15.0609 15.5094 15.0609 17.2539V23.8602H10.9156V10.4945H14.8969V12.3211H14.9516C15.5039 11.2711 16.8602 10.1609 18.8781 10.1609C23.0836 10.1609 23.8602 12.9281 23.8602 16.5266V23.8602V23.8602Z"
+                                                        fill="#4E4A9B" />
+                                                </svg></a>
+                                        </div>
+                                    </div>
+                                    <p class="text-black-64 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                        With BlazeSQL, we have gotten a fast-track to data-driven insights. Blaze enables us to better understand our customers and make data driven decisions. We can quickly test a hypothesis, without involving engineering.
+                                    </p>
+                                </div>
+                                <div class="insight-card-footer">
+                                    <div class="relative z-0">
+                                        <img src="images/Sej-Sander.png" alt="Sej Sander Thorsen"
+                                            class="insight-footer-img">
+                                        <a href="https://klarpris.dk/"
+                                            class="absolute flex items-center justify-center rounded-full -right-2 w-8 h-8 -bottom-2">
+                                            <img src="images/Klarpris.png" alt="Klarpris"
+                                                class="object-contain w-full h-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="label-l">Sej Sander Thorsen</p>
+                                        <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.16">Chief Product Officer // Klarpris</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END testimonials -->
+
+        <!-- FAQ -->
+        <section class="w-full bg-dark-bg">
+            <div class="pb-16 pt-52 bg-light-bg faq-bg md:pb-120 md:pt-72 lg:pt-96">
+                <!-- Viktoria Seeman -->
+                <div class="py-32 mx-2 md:py-40 md:px-0">
+                    <div class="text-center">
+                        <p class="overline-text text-brand-dark">Thousands of people are outperforming their peers
+                            with
+                            Blaze</p>
+                        <h2 class="mt-6 md:mt-10">
+                            Ex. Viktoria Seeman, Amazon
+                        </h2>
+                    </div>
+                    <div
+                        class="mx-auto overflow-hidden bg-white border-0.5 rounded-2xl shadow-insight-card backdrop-blur-120 border-black/40 max-w-[630px] mt-20 flex flex-col">
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/CsFzGi8grRg/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            data-instgrm-version="14">
+                            <div style="padding:16px;"> <a
+                                    href="https://www.instagram.com/reel/CsFzGi8grRg/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                                    target="_blank">
+                                    <div style=" display: flex; flex-direction: row; align-items: center;">
+                                        <div
+                                            style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                        </div>
+                                        <div
+                                            style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 19% 0;"></div>
+                                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                        <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                            xmlns="https://www.w3.org/2000/svg"
+                                            xmlns:xlink="https://www.w3.org/1999/xlink">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                                    <g>
+                                                        <path
+                                                            d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div style="padding-top: 8px;">
+                                        <div
+                                            style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                            View this post on Instagram</div>
+                                    </div>
+                                    <div style="padding: 12.5% 0;"></div>
+                                    <div
+                                        style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                        <div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                            </div>
+                                            <div
+                                                style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: 8px;">
+                                            <div
+                                                style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                            </div>
+                                        </div>
+                                        <div style="margin-left: auto;">
+                                            <div
+                                                style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                            </div>
+                                            <div
+                                                style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                            </div>
+                                            <div
+                                                style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                                        </div>
+                                        <div
+                                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                                        </div>
+                                    </div>
+                                </a>
+                                <p
+                                    style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                    <a href="https://www.instagram.com/reel/CsFzGi8grRg/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                        style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                                        target="_blank">A post shared by Viktoria Semaan (@viktoria.semaan)</a>
+                                </p>
+                            </div>
+                        </blockquote>
+                        <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+                <!-- END Viktoria Seeman -->
+                <div class="container-center">
+                    <h2 class="max-w-2xl mx-auto text-center h1 lg:mt-20">
+                        Frequently Asked Questions
+                    </h2>
+                    <div
+                        class="max-w-4xl mx-auto mt-10 border bg-white-80 backdrop-blur-120 shadow-faq-card border-black/5 rounded-2xl md:mt-20">
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                Where does my data go?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    Data rows in your database will never be uploaded to our servers or sent anywhere else. To generate queries, the AI only needs to see the names of your tables, and the names of the columns. If you connect your database with the desktop version, the query results will go directly from your database to your computer and stay 100% local and private. Graphs and dashboards will use this local data to display on your screen.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                Who is this product for?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    BlazeSQL is for companies with SQL Databases from which technical or non-technical users need to extract data or get insights.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                How can the AI understand things that are unique to my database, including terminology?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    BlazeSQL extracts categorical values, column relationships, and comments from your database and uses the AI’s deep knowledge of many industries to interpret it. If necessary, you can also use the knowledge base to add descriptions for schemas, tables, and columns, as well as example queries or any other information like terminology and business information. This allows the AI to understand and remember important details about your database and your company.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                Is there an API?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    BlazeSQL does not have an API to generate queries, but there is an API that allows you to manage your users and databases for white-labeling BlazeSQL. This way you can re-sell BlazeSQL, or embed it in your website or product.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                What if I don’t want to use all the tables in my database?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    When connecting a database, you are asked to select the tables you would like BlazeSQL to use. This way you can exclude any tables that are not required.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                Is there a size limit for databases I can connect to BlazeSQL?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    BlazeSQL enforces a limit of 300 tables per database to encourage you to only select tables relevant for analysis. Typically, in databases with over 300 tables, most of the tables are not relevant for the data insights you need and should hence be excluded for optimal performance. You can add the database multiple times with different tables selected, or add completely different databases, and then select the relevant database in the chat.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                What Data sources does BlazeSQL support?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    BlazeSQL Supports SQL Databases and Warehouses in the following list
+                                </p>
+                                 <ul class="ml-4 list-disc body-text">
+                                    <li>Snowflake</li>
+                                    <li>BigQuery</li>
+                                    <li>Microsoft SQL Server</li>
+                                    <li>PostgreSQL</li>
+                                    <li>MySQL</li>
+                                    <li>MariaDB</li>
+                                    <li>Oracle</li>
+                                    <li>Redshift</li>
+                                    <li>SAP SQL Anywhere</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                Is there a message limit?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    No, every BlazeSQL Member gets unlimited access to the AI Data Analyst chatbot for each user. If you intend to use BlazeSQL with multiple people, you will require a Team subscription (in which every individual users will have unlimited access to BlazeSQL).
+                                </p>
+                            </div>
+                        </div>
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                Is BlazeSQL Free?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    BlazeSQL offers a free trial for companies to test the solution before adopting it, but this is not a free product and there is no tier that is permanently free.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- faq -->
+                        <div class="faq">
+                            <!-- faq button -->
+                            <button type="button" class="faq-btn">
+                                Does BlazeSQL Provide an On-Premise solution?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M4 12H20M12 4V20" stroke="#0F0F10" stroke-width="2" class="plus-icon" />
+                                    <path d="M4 12H20" stroke="#0F0F10" stroke-width="2" class="minus-icon" />
+                                </svg>
+                            </button>
+                            <!-- faq content -->
+                            <div class="faq-content">
+                                <p class="text-sm md:text-base text-black-56 !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">
+                                    BlazeSQL does not offer an On-Premise solution as the AI requires too much computing power for this to be feasible, but the desktop version allows you to keep your database records and query-results On-Premise as the query results only travel between the database and your device.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END faq -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg">
+        <div class="md:border-b border-spacing-0.5 border-white-12 pt-16 pb-0 md:py-10">
+            <div class="container-center">
+                <div class="flex items-center justify-between w-full">
+                    <div class="flex items-center gap-2 lg:gap-3">
+                        <img src="images/blazeql-white.svg" alt="blazesql" loading="lazy">
+                        <p class="text-xl -tracking-0.4 text-white font-semibold">BlazeSQL</p>
+                    </div>
+                    <div class="items-center justify-end hidden w-full gap-3 md:flex">
+                        <a href="https://www.blazesql.com/demo-request"
+                            class="text-white btn-main btn-secondary btn-md border-white-12 hover:border-white-40">
+                            Book a demo
+                        </a>
+                        <a href="https://www.blazesql.com/app" class="text-white btn-main btn-primary btn-md">
+                            Get started
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="w-full pt-16 pb-16 md:pb-40 md:pt-20">
+            <div class="container-center">
+                <div class="grid grid-cols-2 gap-y-16 md:gap-y-10 gap-x-10 md:gap-x-5 lg:gap-x-10 md:grid-cols-3">
+                    <!-- Item -->
+                    <div>
+                        <p class="mb-6 md:mb-4 overline-text text-white/50">Information</p>
+                        <ul class="flex flex-col gap-6 md:gap-4">
+                            <li>
+                                <a href="https://www.blazesql.com/team-pricing" class="footer-link">Pricing - Teams</a>
+                            </li>
+                            <li>
+                                <a href="https://www.blazesql.com/blaze-pricing" class="footer-link">Pricing - Individual</a>
+                            </li>
+                            <li>
+                                <a href="https://www.blazesql.com/privacy" class="footer-link">Data
+                                    Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Item -->
+                    <div>
+                        <p class="mb-6 md:mb-4 overline-text text-white/50">Blog</p>
+                        <ul class="flex flex-col gap-6 md:gap-4">
+                            <li>
+                                <a href="https://www.blazesql.com/blog/connect-ai-chatgpt-to-snowflake"
+                                    class="footer-link">Connect ChatGPT to Snowflake</a>
+                            </li>
+                            <li>
+                                <a href="https://www.blazesql.com/blog/sql-data-visualization" class="footer-link">SQL
+                                    Data Visualization</a>
+                            </li>
+                            <li>
+                                <a href="https://www.blazesql.com/blog/no-code-business-intelligence"
+                                    class="footer-link">No code business intelligence</a>
+                            </li>
+                            <li>
+                                <a href="https://www.blazesql.com/blog/will-ai-replace-data-analysts"
+                                    class="footer-link">Will AI Replace Data Analysts?</a>
+                            </li>
+                            <li>
+                                <a href="https://www.blazesql.com/blog/sql-tools-for-data-analysis"
+                                    class="footer-link">Top 5 SQL Tools for Data Analysis</a>
+                            </li>
+                            <li>
+                                <a href="https://www.blazesql.com/blog/sql-for-product-analytics"
+                                    class="footer-link">SQL For Product Analytics</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Item -->
+                    <div class="col-span-2 md:col-auto">
+                        <p class="mb-6 md:mb-4 overline-text text-white/50">Product</p>
+                        <ul class="flex flex-col gap-6 md:gap-4">
+                            <li>
+                                <a href="https://www.blazesql.com/no-code-dashboard-builder"class="footer-link">No code Dashboard Builder</a>
+                            </li>
+                            <li>
+                                <a href="https://www.blazesql.com/no-code-report-builder" class="footer-link">No code Report Builder</a>
+                            </li>
+                            <li>
+                                <a href="https://www.blazesql.com/self-service-analytics-platform" class="footer-link">Self-Service Analytics Platform</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block pb-16 md:hidden">
+            <div class="container-center">
+                <div class="grid w-full grid-cols-2 gap-3">
+                    <a href="https://www.blazesql.com/demo-request"><button type="button"
+                            class="w-full text-white btn-main btn-secondary btn-md border-white-12 hover:border-white-40">Book
+                            a
+                            demo</button></a>
+                    <a href="https://www.blazesql.com/app"><button type="button"
+                            class="w-full text-white btn-main btn-primary btn-md">Get
+                            started</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-spacing-0.5 border-white-12 py-10 md:py-6">
+            <div class="container-center">
+                <p class="text-white-56 text-sm md:text-base !leading-171 md:!leading-175 -tracking-0.14 md:-tracking-0.56">&copy; <span class="current-year"></span> BlazeSQL, Inc. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- END footer -->
+    <!-- script -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="store_gclid.js"></script>
+</body>
+
+</html>

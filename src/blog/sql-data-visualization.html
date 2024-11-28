@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta property="og:image" content="https://www.blazesql.com/images/snowflake_chatgpt_integration.png">
+    <meta property="og:image:secure_url" content="https://www.blazesql.com/images/snowflake_chatgpt_integration.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1440">
+    <meta property="og:image:height" content="1024">
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SQL Data visualization requires these 3 easy steps, but BlazeSQL does all the work for you. Here's how you can visualize data from you SQL database in 30 seconds."/>
+        <!-- Google tag (gtag.js) -->
+    <script src="../gtm.js"></script>
+
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e4774817-fdf9-4bf4-a036-7baae3f41bd2" data-blockingmode="auto" type="text/javascript"></script>
+    <link href="output.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon1-32x32.png" type="image/png">
+    <link rel="icon" href="favicon1.ico" type="image/x-icon">
+
+    <title>SQL Data Visualization in just 30 seconds with BlazeSQL</title>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="a8064184-a727-4738-910c-a4b4a52b02eb";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "iilxk31jtt");
+</script>
+          <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=sql"></script>
+  </head>
+  <body>
+         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVXJLN6K"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="bg-white px-6 lg:px-8">
+      <div class="relative isolate overflow-hidden bg-white">
+        <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+          <defs>
+            <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+             <path d="M.5 200V.5H200" fill="none" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
+        </svg>
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+  <header>
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-0" aria-label="Global">
+      <a href="https://www.blazesql.com" class="flex items-center">
+  <img class="h-8 w-auto pr-2" src="../images/blue_flame.png" alt="" />
+  <span>BlazeSQL</span>
+</a>
+
+
+
+      
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="https://www.blazesql.com/privacy.html" class="text-sm font-semibold leading-6 text-gray-900">Privacy Policy</a>
+        <a href="https://www.blazesql.com/terms.html" class="text-sm font-semibold leading-6 text-gray-900">Terms of Service</a>
+        <a href="https://www.blazesql.com/app" class="text-sm font-semibold leading-6 text-gray-900">Open App<span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+  </header>
+</div>
+   <div class="px-6 py-32 lg:px-8">
+  <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+    <p class="text-base font-semibold leading-7 text-indigo-600">SQL Data Visualization</p>
+    <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">SQL Data Visualization in seconds.</h1>
+
+      <p class="mt-6 text-xl leading-8">This article explains how to do it, and shows you a tool that can do it for you in seconds.<br><br>
+
+      It can be broken down to 3 easy steps: Come up with a question or topic, extract the relevant data, and visualize the data.</p>
+      <figure class="mt-16">
+      <img class="bg-gray-50" src="../images/sql-data-visualization.png" alt="sql data visualization steps">
+      <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+        <svg class="mt-0.5 h-5 w-5 flex-none text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+        </svg>
+        SQL Data visualization in 3 easy steps.
+      </figcaption>
+    </figure>
+     <ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
+        <li class="flex gap-x-3">
+
+          <span class="text-xl"><strong class="font-semibold text-gray-900">Step 1: Formulate your question<br></strong>Step 1 is to figure out what you want to visualize. Typically this will mean defining a specific topic or question, like “How many new users signed up to our website each day this week?”. This will determine what data you need to extract from your database in step 2.</span>
+
+        </li>
+
+        <blockquote class="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
+            <p class="text-xl italic font-medium leading-relaxed text-gray-600 dark:text-white">"How many new users signed up to our website each day this week?"</p>
+        </blockquote>
+
+        <li class="flex gap-x-3">
+          <span class="text-xl mt-8"><strong class="font-semibold text-gray-900">Step 2: Data extraction<br></strong>Step 2 is to extract the data you want to visualize. This involves running SQL code to join, manipulate, and extract data from one or more tables in your database. Once you know what you want to visualize, you can figure out what SQL code will extract the relevant data.</span>
+          
+        </li>
+        <pre class="prettyprint lang-sql">#How many users signed up each day this week?
+
+SELECT DATE(signup_date) AS date, COUNT(*) AS new_users
+FROM users
+WHERE signup_date >= CURDATE() - INTERVAL 7 DAY
+GROUP BY date
+ORDER BY date;
+</pre>
+        <li class="flex gap-x-3">
+          <span class="text-xl mt-8"><strong class="font-semibold text-gray-900">Step 3: Create the visualization<br></strong>The final step is to use the data you extracted as an input for a graph. Which graph you use depends on the data you want to graph.
+                <figure class="mt-16">
+      <img class="bg-gray-50" src="../images/sql-data-visualization-example.png" alt="sql data visualization example">
+      <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+        <svg class="mt-0.5 h-5 w-5 flex-none text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+        </svg>
+        Graphing the result of the query shown above.
+      </figcaption>
+          <br><br>In this example, a line graph is best.<br><br>If you simply have a list of numbers you want to compare for different categories, you might use a bar chart or a pie chart.<br><br>If you want to see how something changes over time, a line graph is usually best.<br><br>If you want to see how things change over time for different categories, you may want to use a line graph, with a line for each category.</span>
+        </li>
+      </ul>
+      <div class="mt-10 max-w-2xl">
+    <h2 class="mt-12 text-2xl font-bold tracking-tight text-gray-900">Types of Data Visualization.</h2>
+    <span class="text-xl mt-8"><br>95% of data visualization can be done with line graphs or bar graphs.</span>
+    <span class="text-xl"><strong class="font-semibold text-gray-900"><br><br>Bar Graphs<br></strong>
+      <img class="bg-gray-50" src="../images/bar_graph_example.jpg" alt="sql data visualization bar graph example">
+      <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+        <svg class="mt-0.5 h-5 w-5 flex-none text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+        </svg>
+        An example of a bar graph with categorical data.
+      </figcaption>
+      <span class="text-xl mt-8"><br>Bar graphs are used to compare numbers across different categories. In the above example, you can see the number of units sold for a number of food products. It's very easy to compare the number of units sold by simply looking at the length of each bar.</span>
+    <span class="text-xl"><strong class="font-semibold text-gray-900"><br><br>Line graphs</strong>
+      <img class="bg-gray-50 mt-4" src="../images/sql-data-visualization-example.png" alt="sql data visualization line graph example">
+      <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+        <svg class="mt-0.5 h-5 w-5 flex-none text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+        </svg>
+        An example of a line graph with time series data.
+      </figcaption>
+      <span class="text-xl mt-8"><br>Line graphs are used to compare numbers across time, or across another numeric variable. In the above example, you can see the number of user signups over the course of a week in november. This makes it easy to see how this number progresses up and down over time.</span>
+    <span class="text-xl"><strong class="font-semibold text-gray-900"><br><br>Dashboards</strong>
+      <img class="bg-gray-50 mt-4" src="../images/dashboard_screenshot.png" alt="sql data visualization dashboard example">
+      <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+        <svg class="mt-0.5 h-5 w-5 flex-none text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+        </svg>
+        An example of a dashboard with various graphs and reports.
+      </figcaption>
+      <span class="text-xl mt-8"><br>Dashboards combine various graphs, charts, and reports in a single view. They allow you to monitor various data insights to keep an overview of your business, customers, or operations. The above screenshot shows a dashboard in BlazeSQL, which contains multiple graphs and data insights that provide an overview of a retail company.</span>
+    </div>
+    <div class="mt-10 max-w-2xl">
+      <h2 class="mt-12 text-2xl font-bold tracking-tight text-gray-900">SQL Data Visualization made easy with AI.</h2>
+      <p class="mt-6 text-xl leading-8">BlazeSQL automatically extracts the right data from your database, and creates the perfect graph.<br><br>All you have to do is tell Blaze, the AI chatbot, what kind of insights you’re interested in.Ex. “What is our monthly revenue growth this year for each country?”. Simply send the question in the chat, and watch Blaze do all the work for you. <br><br>Once you have the graph, or table, you can even add it to a dashboard. This allows you to create dashboards by simply telling the chatbot what you want.</p>
+      <figure class="mt-16">
+      <video class="bg-gray-50 rounded-md gif-button" src="../images/no_code_dashboard_builder_demo.mp4" alt="AI Chatbot visualizing SQL data" data-autoplay muted playsinline loop>
+      <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
+        <svg class="mt-0.5 h-5 w-5 flex-none text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+        </svg>
+        BlazeSQL does SQL Data Visualization for you.
+      </figcaption>
+    </figure>
+      <div class="mx-auto max-w-7xl py-32 sm:py-8 lg:flex lg:items-center lg:justify-between lg:py-16">
+        <h2 class="text-3xl font-bold tracking-tight text-grey-900 sm:text-4xl">Visualize your data with BlazeSQL Now.
+</h2>
+        <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+          <a href="https://www.blazesql.com" class="rounded-md bg-indigo-600 px-10 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+        </div>
+      </div>
+     
+  </div>
+        <footer>
+        <div class="mx-auto max-w-7xl overflow-hidden pt-24 px-6 sm:pt-24 lg:px-8">
+          <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+            <div class="pb-6">
+              <a href="../general-contact.html" class="text-xm leading-6 text-gray-400 hover:text-indigo-500">Contact</a>
+
+            </div><div class="pb-6">
+              <a href="https://www.blazesql.com/privacy" class="text-xm leading-6 text-gray-400 hover:text-indigo-500">Privacy Policy</a>
+              
+            </div>
+            <div class="pb-6">
+              <a href="https://www.blazesql.com/terms" class="text-xm leading-6 text-gray-400 hover:text-indigo-500">Terms of Service</a>
+              
+            </div>
+
+          </nav>
+          
+          <p class="mt-10 text-center text-xm leading-5 text-gray-500">&copy; 2023 BlazeSQL, Inc. All rights reserved.</p>
+        </div>
+      </footer>
+</div></div>
+    <script src="../store_gclid.js"></script>
+    <script src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
+    <script>
+      const videos = document.querySelectorAll('video[data-autoplay]')
+
+videos.forEach(video => {
+  if (video.isIntersecting) {
+    video.play()
+  } 
+})
+
+let observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.play()
+    } else {
+      entry.target.pause()
+    }
+  })
+}, { /* options */ })
+
+videos.forEach(video => observer.observe(video))</script>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e4774817-fdf9-4bf4-a036-7baae3f41bd2"
+    data-blockingmode="auto" type="text/javascript"></script>
+  <script src="../gtm.js"></script>
+  <meta property="og:image"
+    content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a" />
+  <meta property="og:image:secure_url"
+    content="https://firebasestorage.googleapis.com/v0/b/querycomposer.appspot.com/o/social_sharing.png?alt=media&token=def759b5-534f-4ca0-967e-4158bd66fd3a" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1440" />
+  <meta property="og:image:height" content="1024" />
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn how to leverage AI for generating queries, understand advantages and limitations, and explore best practices with example prompts that you can use." />
+  <!-- Google tag (gtag.js) -->
+  <link href="../output.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="../images/favicon1-32x32.png" type="image/png" />
+  <link rel="icon" href="../images/favicon1.ico" type="image/x-icon" />
+
+  <title>Expert guide to using OpenAI's ChatGPT to write SQL queries</title>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] =
+        c[a] ||
+        function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "iilxk31jtt");
+  </script>
+</head>
+
+<body>
+  <div class="px-6 bg-white lg:px-8">
+    <div class="relative overflow-hidden bg-white isolate">
+      <svg
+        class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        aria-hidden="true">
+        <defs>
+          <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1"
+            patternUnits="userSpaceOnUse">
+            <path d="M.5 200V.5H200" fill="none" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
+      </svg>
+      <div class="max-w-3xl mx-auto text-base leading-7 text-gray-700">
+        <header>
+          <nav class="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-0" aria-label="Global">
+            <a href="https://www.blazesql.com" class="flex items-center">
+              <img class="w-auto h-8 pr-2" src="../images/blue_flame.png" alt="" />
+              <span>BlazeSQL</span>
+            </a>
+
+            <div class="hidden lg:flex lg:gap-x-12">
+              <a href="https://www.blazesql.com/privacy.html"
+                class="text-sm font-semibold leading-6 text-gray-900">Privacy Policy</a>
+              <a href="https://www.blazesql.com/terms.html" class="text-sm font-semibold leading-6 text-gray-900">Terms
+                of Service</a>
+              <a href="https://www.blazesql.com/app" class="text-sm font-semibold leading-6 text-gray-900">Open App<span
+                  aria-hidden="true">&rarr;</span></a>
+            </div>
+          </nav>
+        </header>
+      </div>
+      <div class="px-6 py-16 lg:px-8">
+        <div class="max-w-3xl mx-auto text-base leading-7 text-gray-700">
+          <h1
+  class="mt-16 mb-4 text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+>
+  Expert guide to using OpenAI's ChatGPT to write SQL queries
+</h1>
+<p class="mt-3 text-xl leading-8">Using ChatGPT to generate SQL queries can be a game-changer, especially for those who might not be SQL experts. ChatGPT quickly translates your request into SQL code with just a simple description of what you want to achieve. This can save you valuable time spent on manual query writing and debugging. It’s like having an SQL expert on standby, helping bridge the gap for beginners while speeding up the workflow for seasoned developers.</p>
+
+<p class="mt-3 text-xl leading-8">Another advantage of using ChatGPT for SQL queries is its ability to assist learning and problem-solving. Getting stuck on syntax or logic errors can be frustrating when learning SQL. ChatGPT can generate queries and explain each part, helping you understand the structure and purpose behind the code. For experienced users, it can provide quick solutions to complex problems, offering different query options you might not have initially considered. This blend of support, speed, and flexibility makes ChatGPT a valuable companion for anyone working with databases.</p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Advantages:</strong></p>
+<ol class="list-decimal list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Speed:</strong> Quickly generate SQL queries, speeding up the development process and allowing for faster iterations.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Learning Tool:</strong> Beginners can use chatbots like ChatGPT as a helpful learning resource, providing query examples and verifying SQL structures.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Adaptability:</strong> ChatGPT can handle standard SQL and different flavours like MySQL or PostgreSQL; we are always shocked to see it easily change between dialects on request.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Best Results with Detailed Context:</strong> To achieve the most accurate results, it’s often necessary to provide the AI with the database schema directly. The more context it has, the better the generated query will align with the specific requirements.</p></li></ol>
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Disadvantages:</strong></p>
+<ol class="list-decimal list-inside"><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Limited Default Context:</strong> GPT doesn't have a built-in understanding of your database schema by default and will attempt to answer your query regardless, which can result in using columns or tables that don't exist. This issue can be resolved by pasting in the relevant database schema, but it can become tedious to do this repeatedly.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Specific Instructions Needed:</strong> General or vague prompts can lead to generic or less-than-optimal queries. Detailed instructions are needed to get precise outputs.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Doesn’t Replace Human Expertise:</strong> For highly complex, nuanced, or performance-critical tasks, the experience and intuition of a seasoned database professional remain essential.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Security Concerns:</strong> Relying on external platforms for SQL generation can introduce security risks, especially when sharing sensitive schema information or data.</p></li><li class="mt-6 text-xl leading-8"><p class="mt-6 text-xl leading-8"><strong class="font-semibold">Risk of Misinterpretation:</strong> If the user’s prompt isn’t clear enough, ChatGPT might produce a syntactically correct query that doesn't fully meet the intended goal.</p></li></ol><p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  Best Practices for Writing SQL with ChatGPT
+</h2>
+<p class="mt-3 text-xl leading-8">Using ChatGPT for writing SQL can be a game-changer, but getting the best results takes a little know-how, like any tool. A lot depends on how you phrase your requests and the context you give them. In this guide, we'll go over some tips to help you structure your prompts to get the most accurate queries and what to do if the responses start to miss the mark.</p>
+
+<h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  How to Structure ChatGPT Prompts for SQL Writing
+</h3>
+<p class="mt-3 text-xl leading-8">A well-structured prompt is crucial in getting useful SQL output. Here are some tips on how to provide clear and concise instructions for ChatGPT:</p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Be Specific About Your Requirements</strong>: The more detail you provide in your prompt, the more accurate ChatGPT’s response will be. When describing the SQL query you need, include information about the tables, columns, conditions, and any specific operations (e.g., filtering, sorting, grouping) you want to perform.</p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Example Prompt</strong>:</p>
+
+<p class="mt-3 text-xl leading-8">I have a table called "orders" with columns: order_id, customer_id, product_id, order_date, and total_amount. I need a query to find the total sales for each customer in 2023, sorted by the highest total sales.</p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">ChatGPT's Output</strong>:</p>
+
+<p class="mt-3 text-xl leading-8">SELECT&#8199;&#8199; customer_id,&#8199;&#8199; SUM(total_amount) AS total_salesFROM&#8199;&#8199; ordersWHERE&#8199;&#8199; YEAR(order_date) = 2023GROUP BY&#8199;&#8199; customer_idORDER BY&#8199;&#8199; total_sales DESC;</p>
+<p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Include the Schema When Possible</strong>: Since ChatGPT doesn't have an inherent knowledge of your database schema, pasting in relevant parts of the schema can significantly improve response accuracy. For example, if your database has tables with similar names or multiple related columns, providing the schema helps ChatGPT generate a more precise query.</p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Example of Providing Schema Context</strong>:</p>
+
+<p class="mt-3 text-xl leading-8">&#8199;&#8199; Here is the schema for my database:</p>
+
+<p class="mt-3 text-xl leading-8">&#8199;&#8199; Table: customers
+&#8199;&#8199; Columns: customer_id, first_name, last_name, email</p>
+
+<p class="mt-3 text-xl leading-8">&#8199;&#8199; Table: orders
+&#8199;&#8199; Columns: order_id, customer_id, product_id, order_date, total_amount</p>
+
+<p class="mt-3 text-xl leading-8">&#8199;&#8199; Table: products
+&#8199;&#8199; Columns: product_id, product_name, category, price</p>
+
+<p class="mt-3 text-xl leading-8">&#8199;&#8199; I need a query to list all customers who made a purchase in 2023, along with the total amount they spent.</p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">ChatGPT's Output</strong>:</p>
+
+<p class="mt-3 text-xl leading-8">   SELECT customers.customer_id, customers.first_name, customers.last_name, SUM(orders.total_amount) AS total_spent</p>
+
+<p class="mt-3 text-xl leading-8">   FROM customers</p>
+
+<p class="mt-3 text-xl leading-8">   JOIN orders ON customers.customer_id = orders.customer_id</p>
+
+<p class="mt-3 text-xl leading-8">   WHERE YEAR(orders.order_date) = 2023</p>
+
+<p class="mt-3 text-xl leading-8">   GROUP BY customers.customer_id, customers.first_name, customers.last_name;</p>
+<p class="mt-3 text-xl leading-8" data-nbsp="true">&nbsp;</p>
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Specify the SQL Flavor</strong>: SQL syntax can vary slightly between databases (e.g., MySQL, PostgreSQL, SQL Server). When relevant, mention which SQL dialect you use to ensure the query is formatted correctly.</p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">Example Prompt</strong>:</p>
+
+<p class="mt-3 text-xl leading-8">I’m using PostgreSQL. Write a query to find the top 5 products based on the total sales amount in 2023 from the "orders" and "products" tables.</p>
+
+<p class="mt-3 text-xl leading-8"><strong class="font-semibold">ChatGPT's Output</strong>:</p>
+
+<p class="mt-3 text-xl leading-8">SELECT p.product_name, SUM(o.total_amount) AS total_sales</p>
+
+<p class="mt-3 text-xl leading-8">   FROM products p</p>
+
+<p class="mt-3 text-xl leading-8">   JOIN orders o ON p.product_id = o.product_id</p>
+
+<p class="mt-3 text-xl leading-8"><span class="font-semibold text-blue-900">   WHERE DATE_PART('year', o.order_date) = 2023</span></p>
+
+<p class="mt-3 text-xl leading-8">   GROUP BY p.product_name</p>
+
+<p class="mt-3 text-xl leading-8">   ORDER BY total_sales DESC</p>
+
+<p class="mt-3 text-xl leading-8">   LIMIT 5;</p>
+
+<h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Fixing drops in output quality from ChatGPT for SQL Queries.
+</h3>
+<p class="mt-3 text-xl leading-8">If you notice that ChatGPT’s responses start hallucinating or make incorrect assumptions, it might be because the session has become cluttered with too much prior information. Creating a new chat can reset the conversation, helping you obtain more accurate results.</p>
+
+<p class="mt-3 text-xl leading-8">Start by asking ChatGPT for a detailed breakdown of all tables and columns using our example prompt:</p>
+
+<p class="mt-3 text-xl leading-8">Based on the information provided, summarize all SQL tables and columns in detail to use in another session for query generation.</p>
+
+<p class="mt-3 text-xl leading-8">Once you receive this summary, open a new ChatGPT session and paste the summary into the initial prompt. By providing this fresh context, you ensure ChatGPT only uses the relevant data moving forward, making its responses more accurate. This practice is particularly useful if you've been working with multiple databases or have explored various aspects of a schema in previous conversations.</p>
+
+<p class="mt-3 text-xl leading-8">Additionally, if you’re dealing with a large database, you don’t need to paste the entire schema—just the tables and columns relevant to your query. This keeps the context clear and focused, reducing the chance of misinterpretation.</p>
+
+<p class="mt-3 text-xl leading-8">By following these practices, you can increase the quality of the SQL queries generated by ChatGPT.</p>
+
+<h2
+  class="mt-16 mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl"
+>
+  Example ChatGPT prompts to generate SQL.
+</h2>
+<p class="mt-3 text-xl leading-8">In this section, we provide a series of example prompts to demonstrate how to effectively use ChatGPT for generating SQL queries based on specific data retrieval tasks and given database schemas. Each example illustrates how to structure your prompt to include the necessary context and details, enabling ChatGPT to produce accurate and efficient SQL code for various scenarios. By studying these examples, you'll learn best practices for crafting prompts that help you leverage ChatGPT's capabilities in SQL query generation.</p>
+<h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Example 1: Provide a list of all customer countries, ranked by the number of orders placed in the last 24 days, from highest to lowest.
+</h3>
+<p class="mt-3 text-xl leading-8">Given the following table schema, provide a list of all customer countries ranked by the number of orders placed in the last 24 days, from highest to lowest.</p>
+
+<p class="mt-3 text-xl leading-8">```sql</p>
+
+<p class="mt-3 text-xl leading-8">-- Customers Table</p>
+
+<p class="mt-3 text-xl leading-8">CREATE TABLE Customers (</p>
+
+<p class="mt-3 text-xl leading-8">    customer_id INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">    name VARCHAR(100),</p>
+
+<p class="mt-3 text-xl leading-8">    country VARCHAR(100)</p>
+
+<p class="mt-3 text-xl leading-8">);</p>
+
+<p class="mt-3 text-xl leading-8">-- Orders Table</p>
+
+<p class="mt-3 text-xl leading-8">CREATE TABLE Orders (</p>
+
+<p class="mt-3 text-xl leading-8">    order_id INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">    customer_id INT,</p>
+
+<p class="mt-3 text-xl leading-8">    order_date DATE,</p>
+
+<p class="mt-3 text-xl leading-8">    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)</p>
+
+<p class="mt-3 text-xl leading-8">);</p>
+
+<p class="mt-3 text-xl leading-8">```</p>
+
+<p class="mt-3 text-xl leading-8">Now, write a query to rank the countries by the total number of orders in the last 24 days.</p>
+<h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Example 2: List all sign-ups with their attribution channels, ranked by the number of sign-ups for each channel in the last calendar month.
+</h3>
+<p class="mt-3 text-xl leading-8">Given the following table schema, list all sign-ups with their attribution channels, ranked by the number of sign-ups for each channel in the last calendar month.</p>
+
+<p class="mt-3 text-xl leading-8">```sql</p>
+
+<p class="mt-3 text-xl leading-8">-- Users Table</p>
+
+<p class="mt-3 text-xl leading-8">CREATE TABLE Users (</p>
+
+<p class="mt-3 text-xl leading-8">    user_id INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">    signup_date DATE,</p>
+
+<p class="mt-3 text-xl leading-8">    attribution_channel VARCHAR(100)</p>
+
+<p class="mt-3 text-xl leading-8">);</p>
+
+<p class="mt-3 text-xl leading-8">```</p>
+
+<p class="mt-3 text-xl leading-8">Now, write a query to rank the attribution channels by the number of sign-ups in the last calendar month.</p>
+<h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Example 3: Identify customers who have not made a purchase in the past year but have shown activity on the website.
+</h3>
+<p class="mt-3 text-xl leading-8">Given the following table schema, identify customers who have not made a purchase in the past year but have shown activity on the website.</p>
+
+<p class="mt-3 text-xl leading-8">```sql</p>
+
+<p class="mt-3 text-xl leading-8">-- Customers Table</p>
+
+<p class="mt-3 text-xl leading-8">CREATE TABLE Customers (</p>
+
+<p class="mt-3 text-xl leading-8">    customer_id INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">    name VARCHAR(100),</p>
+
+<p class="mt-3 text-xl leading-8">    email VARCHAR(100)</p>
+
+<p class="mt-3 text-xl leading-8">);</p>
+
+<p class="mt-3 text-xl leading-8">-- Orders Table</p>
+
+<p class="mt-3 text-xl leading-8">CREATE TABLE Orders (</p>
+
+<p class="mt-3 text-xl leading-8">    order_id INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">    customer_id INT,</p>
+
+<p class="mt-3 text-xl leading-8">    order_date DATE,</p>
+
+<p class="mt-3 text-xl leading-8">    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)</p>
+
+<p class="mt-3 text-xl leading-8">);
+</p>
+
+<p class="mt-3 text-xl leading-8">-- Activity Table</p>
+
+<p class="mt-3 text-xl leading-8">CREATE TABLE Activity (</p>
+
+<p class="mt-3 text-xl leading-8">    activity_id INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">    customer_id INT,</p>
+
+<p class="mt-3 text-xl leading-8">    activity_date DATE,</p>
+
+<p class="mt-3 text-xl leading-8">    activity_type VARCHAR(100),</p>
+
+<p class="mt-3 text-xl leading-8">    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)</p>
+
+<p class="mt-3 text-xl leading-8">);</p>
+
+<p class="mt-3 text-xl leading-8">```</p>
+
+<p class="mt-3 text-xl leading-8"><span class="font-semibold text-blue-900">Now, write a query to find customers who haven't made a purchase in the past year but have at least one activity recorded on the website.</span></p>
+<h3
+  class="mt-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl"
+>
+  Example 4: Identify the first action taken in our app by customers who convert within 48 hours.
+
+</h3>
+<p class="mt-3 text-xl leading-8">Given the following table schema, identify the first action taken in our app by customers who convert within 48 hours.</p>
+
+<p class="mt-3 text-xl leading-8">```sql</p>
+
+<p class="mt-3 text-xl leading-8">-- Customers Table</p>
+
+<p class="mt-3 text-xl leading-8">CREATE TABLE Customers (</p>
+
+<p class="mt-3 text-xl leading-8">    customer_id INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">    signup_date DATETIME</p>
+
+<p class="mt-3 text-xl leading-8">);</p>
+
+<p class="mt-3 text-xl leading-8">-- Conversions Table</p>
+
+<p class="mt-3 text-xl leading-8">CREATE TABLE Conversions (</p>
+
+<p class="mt-3 text-xl leading-8">    conversion_id INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">    customer_id INT,</p>
+
+<p class="mt-3 text-xl leading-8">    conversion_date DATETIME,</p>
+
+<p class="mt-3 text-xl leading-8">    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)</p>
+
+<p class="mt-3 text-xl leading-8">);</p>
+
+<p class="mt-3 text-xl leading-8">-- Actions Table</p>
+
+<p class="mt-3 text-xl leading-8">CREATE TABLE Actions (</p>
+
+<p class="mt-3 text-xl leading-8">    action_id INT PRIMARY KEY,</p>
+
+<p class="mt-3 text-xl leading-8">    customer_id INT,</p>
+
+<p class="mt-3 text-xl leading-8">    action_type VARCHAR(100),</p>
+
+<p class="mt-3 text-xl leading-8">    action_date DATETIME,</p>
+
+<p class="mt-3 text-xl leading-8">    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)</p>
+
+<p class="mt-3 text-xl leading-8">);</p>
+
+<p class="mt-3 text-xl leading-8">```</p>
+
+<p class="mt-3 text-xl leading-8">Now, write a query to find the first action taken by customers who convert within 48 hours of their signup date.</p>
+
+
+        </div>
+      </div>
+    </div>
+    <script src="../store_gclid.js"></script>
+    <script src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
+    <script>
+      const videos = document.querySelectorAll("video[data-autoplay]");
+
+      videos.forEach((video) => {
+        if (video.isIntersecting) {
+          video.play();
+        }
+      });
+
+      let observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.play();
+            } else {
+              entry.target.pause();
+            }
+          });
+        },
+        {
+          /* options */
+        }
+      );
+
+      videos.forEach((video) => observer.observe(video));
+    </script>
+</body>
+
+</html>

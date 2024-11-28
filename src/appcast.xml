@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>BlazeSQL</title>
+        <description>Most recent updates to BlazeSQL</description>
+        <language>en</language>
+        <item>
+            <title>Version 1.8.15</title>
+            <sparkle:releaseNotesLink>
+                https://staging.blazesql.com/releasenotes.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Sat, 21 Sep 2024 19:39:18 +0200</pubDate>
+            <enclosure url="query_composer-1.8.15+99-macos_zip.zip"
+                       sparkle:edSignature="
+                       s2OxbkICFuLgNNznE7nHv+hSS2Q5oi5oVzZf58BgnPJsKxsdQRY/BSYR1Atuewk8e8tC90clgV++djt/PTivCA=="
+                       sparkle:version="99"
+                       sparkle:shortVersionString="1.8.15"
+                       sparkle:os="macos"
+                       length="113166250"
+                       type="application/octet-stream" />
+        </item>
+        <item>
+            <title>Version 1.8.15</title>
+            <sparkle:releaseNotesLink>https://staging.blazesql.com/releasenotes.html</sparkle:releaseNotesLink>
+            <pubDate>Sat, 21 Sep 2024 19:39:18 +0200</pubDate>
+            <enclosure url="https://staging.blazesql.com/BlazeSQL-1.8.15-windows-setup.exe"
+                       sparkle:dsaSignature="MD0CHQCERvLv3g21yMNSdHc4C30toSDcLfcc+eLjc94zAhxqsjeRRUT+kufd1IZ6GjOgfRPVokvRiVumm+pv"
+                       sparkle:version="99"
+                       sparkle:shortVersionString="1.8.15"
+                       sparkle:os="windows"
+                       length="0"
+                       type="application/octet-stream" />
+        </item>
+    </channel>
+</rss>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
